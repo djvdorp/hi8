@@ -1,0 +1,604 @@
+;
+; Copyright 2012, Broadcom Corporation.
+; All Rights Reserved.
+;
+
+[version]
+Signature       = "$Windows NT$"                ; Combined WinXP/Vista inf
+Class           = Net
+ClassGUID       = {4d36e972-e325-11ce-bfc1-08002be10318}
+Provider        = %V_BCM%
+
+DriverVer=07/28/2015, 1.478.0.0
+CatalogFile     = bcmdhd63.cat
+
+[Manufacturer]
+        %V_BCM% = BROADCOM, NTamd64.6.2, NTx86.6.2
+
+[ControlFlags]
+        ExcludeFromSelect = *
+
+[BROADCOM.NTamd64.6.2]
+		%BCM435SD_DeviceDesc% = BCM435XNGSD_NT62, SD\VID_02D0&PID_4356&FN_1
+		%BCM4343SD_DeviceDesc% = BCM4343XNGSD_NT62, SD\VID_02D0&PID_A9A6&FN_1
+
+[BROADCOM.NTx86.6.2]
+		%BCM435SD_DeviceDesc% = BCM435XNGSD_NT62, SD\VID_02D0&PID_4356&FN_1
+		%BCM4343SD_DeviceDesc% = BCM4343XNGSD_NT62, SD\VID_02D0&PID_A9A6&FN_1
+
+[BCM435XNGSD_NT62.NTamd64]
+        Include         = netvwifibus.inf
+        Needs           = VWiFiBus.CopyFiles
+        *IfType         = 71    ; IF_TYPE_IEEE80211
+        *MediaType      = 16    ; NdisMediumNative802_11
+        *PhysicalMediaType = 9  ; NdisPhysicalMediumNative802_11
+        Characteristics = 0x84  ; NCF_PHYSICAL | NCF_HAS_UI
+        BusType         = 15    ; PNP bus
+        AddReg          = BCM43XX_NT61.reg, BCMSDH43XX.brcm.reg, common.reg, common.vista.reg, gn.options.reg, bagn40.options.reg, nbg20.channels.reg, nbg40.channels.reg, wowl.std_keywords.reg, wowl.capabilities.enabled.reg
+        CopyFiles       = BCM43XNXSD_NT60.files.NTamd64
+
+[BCM435XNGSD_NT62.NTamd64.Services]
+        Include = netvwifibus.inf
+        Needs   = VWiFiBus.Services
+        AddService = BCMSDH43XX, 2, BCMSDH43XX_NT60.Service.NTamd64, common.EventLog
+
+[BCM435XNGSD_NT62.NTamd64.HW]
+        Include = netvwifibus.inf
+        Needs   = VWiFiBus.PnPFilterRegistration
+
+[BCM4343XNGSD_NT62.NTamd64]
+        Include         = netvwifibus.inf
+        Needs           = VWiFiBus.CopyFiles
+        *IfType         = 71    ; IF_TYPE_IEEE80211
+        *MediaType      = 16    ; NdisMediumNative802_11
+        *PhysicalMediaType = 9  ; NdisPhysicalMediumNative802_11
+        Characteristics = 0x84  ; NCF_PHYSICAL | NCF_HAS_UI
+        BusType         = 15    ; PNP bus
+        AddReg          = BCM43XX_NT61.reg, BCMSDH43XX.brcm.reg, common.reg, common.vista.reg, gn.options.reg, nbg20.channels.reg, wowl.std_keywords.reg, wowl.capabilities.enabled.reg, BCMSDH4343.brcm.reg
+        CopyFiles       = BCM4343XSD_NT60.files.NTamd64
+
+[BCM4343XNGSD_NT62.NTamd64.Services]
+        Include = netvwifibus.inf
+        Needs   = VWiFiBus.Services
+        AddService = BCMSDH43XX, 2, BCMSDH43XX_NT60.Service.NTamd64, common.EventLog
+
+[BCM4343XNGSD_NT62.NTamd64.HW]
+        Include = netvwifibus.inf
+        Needs   = VWiFiBus.PnPFilterRegistration
+
+[BCM435XNGSD_NT62.NTx86]
+        Include         = netvwifibus.inf
+        Needs           = VWiFiBus.CopyFiles
+        *IfType         = 71    ; IF_TYPE_IEEE80211
+        *MediaType      = 16    ; NdisMediumNative802_11
+        *PhysicalMediaType = 9  ; NdisPhysicalMediumNative802_11
+        Characteristics = 0x84  ; NCF_PHYSICAL | NCF_HAS_UI
+        BusType         = 15    ; PNP bus
+        AddReg          = BCM43XX_NT61.reg, BCMSDH43XX.brcm.reg, common.reg, common.vista.reg, gn.options.reg, bagn40.options.reg, nbg20.channels.reg, nbg40.channels.reg, wowl.std_keywords.reg, wowl.capabilities.enabled.reg
+        CopyFiles       = BCM43XNXSD_NT60.files.NTx86
+
+[BCM435XNGSD_NT62.NTx86.Services]
+        Include = netvwifibus.inf
+        Needs   = VWiFiBus.Services
+        AddService = BCMSDH43XX, 2, BCMSDH43XX_NT60.Service.NTx86, common.EventLog
+
+[BCM435XNGSD_NT62.NTx86.HW]
+        Include = netvwifibus.inf
+        Needs   = VWiFiBus.PnPFilterRegistration
+
+
+[BCM4343XNGSD_NT62.NTx86]
+        Include         = netvwifibus.inf
+        Needs           = VWiFiBus.CopyFiles
+        *IfType         = 71    ; IF_TYPE_IEEE80211
+        *MediaType      = 16    ; NdisMediumNative802_11
+        *PhysicalMediaType = 9  ; NdisPhysicalMediumNative802_11
+        Characteristics = 0x84  ; NCF_PHYSICAL | NCF_HAS_UI
+        BusType         = 15    ; PNP bus
+        AddReg          = BCM43XX_NT61.reg, BCMSDH43XX.brcm.reg, common.reg, common.vista.reg, gn.options.reg, nbg20.channels.reg, wowl.std_keywords.reg, wowl.capabilities.enabled.reg, BCMSDH4343.brcm.reg
+        CopyFiles       = BCM4343XSD_NT60.files.NTx86
+
+[BCM4343XNGSD_NT62.NTx86.Services]
+        Include = netvwifibus.inf
+        Needs   = VWiFiBus.Services
+        AddService = BCMSDH43XX, 2, BCMSDH43XX_NT60.Service.NTx86, common.EventLog
+
+[BCM4343XNGSD_NT62.NTx86.HW]
+        Include = netvwifibus.inf
+        Needs   = VWiFiBus.PnPFilterRegistration
+
+[BCM43XX_NT61.reg]
+        ; Ndis Info
+        ; Interfaces
+        HKR,    Ndi\Interfaces, UpperRange,     ,       "ndis5"
+        HKR,    Ndi\Interfaces, LowerRange,     ,       "ethernet,wlan,vwifi"
+
+[BCMSDH43XX.brcm.reg]
+        HKR,    Ndi,    HelpText,               ,       %BCM43XX_HELP%
+        HKR,    Ndi,    Service,                0,      "BCMSDH43XX"
+
+        HKR,     ,"featureflag",      65537, "0x00000004"
+
+[BCMSDH4343.brcm.reg]
+        HKR,    ,       "DongleConsoleMs",      0,      "0"
+
+[common.EventLog]
+        AddReg = common.AddEventLog.reg
+
+[common.AddEventLog.reg]
+        HKR,    ,       EventMessageFile,       0x00020000,     "%%SystemRoot%%\System32\netevent.dll"
+        HKR,    ,       TypesSupported,         0x00010001,     7
+
+[BCMSDH43XX_NT60.Service.NTamd64]
+        DisplayName     = %BCMSDH43XX_Service_DispName%
+        ServiceType     = 1                     ; %SERVICE_KERNEL_DRIVER%
+        StartType       = 3                     ; %SERVICE_DEMAND_START%
+        ErrorControl    = 1                     ; %SERVICE_ERROR_NORMAL%
+        ServiceBinary   = %12%\bcmdhd63.sys
+        LoadOrderGroup  = NDIS
+
+[BCM43XNXSD_NT60.files.NTamd64]
+        bcmdhd63.sys,,,6
+        4356r2rtecdc.bin,4356a2rtecdc.bin,,6
+        4356r2nvram.txt,bcm94356z_p122.txt,,6
+
+; 11 == %windir%/system32
+; 12 == %windir%/system32/drivers
+
+[BCM4343XSD_NT60.files.NTamd64]
+        bcmdhd63.sys,,,6
+        43430r0rtecdc.bin,43438a0rtecdc.bin,,6
+        43430r1rtecdc.bin,43438a1rtecdc.bin,,6
+        43430r0nvram.txt,bcm943430wlselgs.txt,,6
+        43430r1nvram.txt,bcm943430a1wlselgs.txt,,6
+
+; 11 == %windir%/system32
+; 12 == %windir%/system32/drivers
+
+
+[BCMSDH43XX_NT60.Service.NTx86]
+        DisplayName     = %BCMSDH43XX_Service_DispName%
+        ServiceType     = 1                     ; %SERVICE_KERNEL_DRIVER%
+        StartType       = 3                     ; %SERVICE_DEMAND_START%
+        ErrorControl    = 1                     ; %SERVICE_ERROR_NORMAL%
+        ServiceBinary   = %12%\bcmdhd63.sys
+        LoadOrderGroup  = NDIS
+
+[BCM43XNXSD_NT60.files.NTx86]
+        bcmdhd63.sys,,,6
+        4356r2rtecdc.bin,4356a2rtecdc.bin,,6
+        4356r2nvram.txt,bcm94356z_p122.txt,,6
+
+; 11 == %windir%/system32
+; 12 == %windir%/system32/drivers
+
+[BCM4343XSD_NT60.files.NTx86]
+        bcmdhd63.sys,,,6
+        43430r0rtecdc.bin,43438a0rtecdc.bin,,6
+        43430r1rtecdc.bin,43438a1rtecdc.bin,,6
+        43430r0nvram.txt,bcm943430wlselgs.txt,,6
+        43430r1nvram.txt,bcm943430a1wlselgs.txt,,6
+
+; 11 == %windir%/system32
+; 12 == %windir%/system32/drivers
+
+
+
+
+[DestinationDirs]
+	DefaultDestDir                                = 11
+	BCM43XNXSD_NT60.files.NTamd64                 = 12
+	BCM43XNXSD_NT60.files.NTx86                   = 12
+	BCM4343XSD_NT60.files.NTamd64                 = 12
+	BCM4343XSD_NT60.files.NTx86                   = 12
+
+[SourceDisksNames]
+        1=%BCM43XX_DiskName%,,
+
+; for WinVista specify bcmdhd63.sys
+[SourceDisksFiles.amd64]
+	bcmdhd63.sys=1
+	;43241b4rtecdc.bin=1
+	4356a2rtecdc.bin=1
+	bcm94356z_p122.txt=1
+	43438a0rtecdc.bin=1
+	43438a1rtecdc.bin=1
+	bcm943430wlselgs.txt=1
+	bcm943430a1wlselgs.txt=1
+
+[SourceDisksFiles.x86]
+	bcmdhd63.sys=1
+	;43241b4rtecdc.bin=1
+	4356a2rtecdc.bin=1
+	bcm94356z_p122.txt=1
+	43438a0rtecdc.bin=1
+	43438a1rtecdc.bin=1
+	bcm943430wlselgs.txt=1
+	bcm943430a1wlselgs.txt=1
+
+;Uninstall
+[Cleanup]
+
+; common for WinVista, but excluded in WinXP and older
+[common.vista.reg]
+        HKR,    Ndi\params\*PriorityVLANTag, ParamDesc, 0,      %PriorityVLANTag%
+        HKR,    Ndi\params\*PriorityVLANTag, type,      0,      "enum"
+        HKR,    Ndi\params\*PriorityVLANTag\enum, "0",  0,      %PriorityAndVLANDisabled%
+        HKR,    Ndi\params\*PriorityVLANTag\enum, "1",  0,      %PriorityEnabled%
+        HKR,    Ndi\params\*PriorityVLANTag\enum, "2",  0,      %VLANEnabled%
+        HKR,    Ndi\params\*PriorityVLANTag\enum, "3",  0,      %PriorityAndVLANEnabled%
+        HKR,    Ndi\params\*PriorityVLANTag,default,,"0"
+        HKR,    Ndi\params\*PriorityVLANTag,optional,,"0"
+
+; common for all platform
+[common.reg]
+;        HKR,    ,"DongleImagePath",       0,      "\SystemRoot\system32\drivers\rtecdc.bin"
+;        HKR,    ,"SROMImagePath",         0,      "\SystemRoot\system32\drivers\nvram.txt"
+        HKLM,system\CurrentControlSet\Services\NativeWiFiP\Parameters,EnableWoWLAN,0x00010001,1
+
+        HKR,    Ndi\Params\*PacketCoalescing,  ParamDesc,  0, "Packet Coalescing"
+        HKR,    Ndi\Params\*PacketCoalescing,  Type,       0, "enum"
+        HKR,    Ndi\Params\*PacketCoalescing,  Default,    0, "1"
+        HKR,    Ndi\Params\*PacketCoalescing\enum,   "0",  0, "Disabled"
+        HKR,    Ndi\Params\*PacketCoalescing\enum,   "1",  0, "Enabled"
+
+        HKR, Ndi\Params\*WakeOnPattern,  ParamDesc,  0, "Wake on pattern match"
+        HKR, Ndi\Params\*WakeOnPattern,  Type,       0, "enum"
+        HKR, Ndi\Params\*WakeOnPattern,  Default,    0, "1"
+        HKR, Ndi\Params\*WakeOnPattern\enum,   "0",  0, "Disabled"
+        HKR, Ndi\Params\*WakeOnPattern\enum,   "1",  0, "Enabled"
+
+        HKR, Ndi\Params\*PMWiFiRekeyOffload,  ParamDesc,  0, "Wake on RSN Rekey"
+        HKR, Ndi\Params\*PMWiFiRekeyOffload,  Type,       0, "enum"
+        HKR, Ndi\Params\*PMWiFiRekeyOffload,  Default,    0, "1"
+        HKR, Ndi\Params\*PMWiFiRekeyOffload\enum,   "0",  0, "Disabled"
+        HKR, Ndi\Params\*PMWiFiRekeyOffload\enum,   "1",  0, "Enabled"
+
+        HKR,    Ndi\params\RoamDelta, ParamDesc,        0,      %RoamingTendency%
+        HKR,    Ndi\params\RoamDelta, type,             0,      "enum"
+        HKR,    Ndi\params\RoamDelta\enum, "0",         0,      %Aggressive%
+        HKR,    Ndi\params\RoamDelta\enum, "1",         0,      %Moderate%
+        HKR,    Ndi\params\RoamDelta\enum, "2",         0,      %Conservative%
+        HKR,    Ndi\params\RoamDelta\enum, "3",         0,      %Auto%
+        HKR,    Ndi\params\RoamDelta,default,,"3"
+
+        HKR,    Ndi\params\MPC, ParamDesc,              0,      %MinimumPowerConsumption%
+        HKR,    Ndi\params\MPC, type,                   0,      "enum"
+        HKR,    Ndi\params\MPC\enum, "0",               0,      %Disabled%
+        HKR,    Ndi\params\MPC\enum, "1",               0,      %Enabled%
+        HKR,    Ndi\params\MPC,default,,"1"
+
+        HKR,    Ndi\params\frag, ParamDesc,     0,      %FragmentationThreshold%
+        HKR,    Ndi\params\frag,type,0,"dword"
+        HKR,    Ndi\params\frag,min,,"256"
+        HKR,    Ndi\params\frag,max,,"2346"
+        HKR,    Ndi\params\frag,default,,"2346"
+
+        HKR,    Ndi\params\rts, ParamDesc,      0,      %RTSThreshold%
+        HKR,    Ndi\params\rts,type,0,"dword"
+        HKR,    Ndi\params\rts,min,,"0"
+        HKR,    Ndi\params\rts,max,,"2347"
+        HKR,    Ndi\params\rts,default,,"2347"
+
+        HKR,    Ndi\params\NetworkAddress, ParamDesc,   0, %LocallyAdministeredMACAddress%
+        HKR,    Ndi\params\NetworkAddress, type,        0, "edit"
+        HKR,    Ndi\params\NetworkAddress, LimitText,   0, "12"
+        HKR,    Ndi\params\NetworkAddress, UpperCase,  0, "1"
+        HKR,    Ndi\params\NetworkAddress, default,     0, ""
+        HKR,    Ndi\params\NetworkAddress, optional,    0, "1"
+
+        HKR,    Ndi\params\PwrOut, ParamDesc,   0,      %PowerOutput%
+        HKR,    Ndi\params\PwrOut, type,                0,      "enum"
+        HKR,    Ndi\params\PwrOut\enum, "100",  0,      "100%%"
+        HKR,    Ndi\params\PwrOut\enum, "75",   0,      "75%%"
+        HKR,    Ndi\params\PwrOut\enum, "50",   0,      "50%%"
+        HKR,    Ndi\params\PwrOut\enum, "25",   0,      "25%%"
+        HKR,    Ndi\params\PwrOut,default,,"100"
+
+        HKR,    Ndi\params\FrameBursting, ParamDesc,    0,      %XPress_Technology%
+        HKR,    Ndi\params\FrameBursting, type,         0,      "enum"
+        HKR,    Ndi\params\FrameBursting\enum, "0",             0,      %Disabled%
+        HKR,    Ndi\params\FrameBursting\enum, "1",             0,      %Enabled%
+        HKR,    Ndi\params\FrameBursting,default,,"0"
+
+        HKR,    Ndi\params\BTCoexist, ParamDesc,        0,      %BlueToothCollaboration%
+        HKR,    Ndi\params\BTCoexist, type,             0,      "enum"
+        HKR,    Ndi\params\BTCoexist\enum, "0", 0,      %Disable%
+        HKR,    Ndi\params\BTCoexist\enum, "1", 0,      %Enable%
+        HKR,    Ndi\params\BTCoexist\enum, "3", 0,      %Auto%
+        HKR,    Ndi\params\BTCoexist,default,,"3"
+
+        HKR,    Ndi\params\WakeUpCapabilities, ParamDesc,       0,      %WakeUpCapabilities%
+        HKR,    Ndi\params\WakeUpCapabilities, type,            0,      "enum"
+        HKR,    Ndi\params\WakeUpCapabilities\enum, "0",        0,      %None%
+        HKR,    Ndi\params\WakeUpCapabilities\enum, "2",        0,      %NetPattern%
+        HKR,    Ndi\params\WakeUpCapabilities\enum, "28",       0,      %LossofAP%
+        HKR,    Ndi\params\WakeUpCapabilities\enum, "30",       0,      %LossNet%
+        HKR,    Ndi\params\WakeUpCapabilities\enum, "31",       0,      %All%
+        HKR,    Ndi\params\WakeUpCapabilities,default,,"3"
+
+        HKR,    Ndi\params\antdiv, ParamDesc,   0,      %AntennaDiversity%
+        HKR,    Ndi\params\antdiv, type,        0,      "enum"
+        HKR,    Ndi\params\antdiv\enum, "-1",   0,      %Auto%
+        HKR,    Ndi\params\antdiv\enum, "0",    0,      %Main%
+        HKR,    Ndi\params\antdiv\enum, "1",    0,      %Aux%
+        HKR,    Ndi\params\antdiv,default,,"-1"
+
+        HKR,    Ndi\params\WME, ParamDesc,      0,      %WME%
+        HKR,    Ndi\params\WME, type,           0,      "enum"
+        HKR,    Ndi\params\WME\enum, "-1",      0,      %Auto%
+        HKR,    Ndi\params\WME\enum, "1",       0,      %Enabled%
+        HKR,    Ndi\params\WME\enum, "0",       0,      %Disabled%
+        HKR,    Ndi\params\WME,default,,"-1"
+
+        HKR,    Ndi\params\BtAmp, ParamDesc,    0,      %BTAMP%
+        HKR,    Ndi\params\BtAmp, type,         0,      "enum"
+        HKR,    Ndi\params\BtAmp\enum, "0",     0,      %Disabled%
+        HKR,    Ndi\params\BtAmp\enum, "1",     0,      %Enabled%
+        HKR,    Ndi\params\BtAmp,default,,"1"
+
+        HKR,    Ndi\params\ListenInterval, ParamDesc,     0,      %ListenInterval%
+        HKR,    Ndi\params\ListenInterval,type,0,"dword"
+        HKR,    Ndi\params\ListenInterval,min,,"1"
+        HKR,    Ndi\params\ListenInterval,max,,"100"
+        HKR,    Ndi\params\ListenInterval,default,,"1"
+
+        HKR,    Ndi\params\D2ListenInterval, ParamDesc,     0,      %D2ListenInterval%
+        HKR,    Ndi\params\D2ListenInterval,type,0,"dword"
+        HKR,    Ndi\params\D2ListenInterval,min,,"1"
+        HKR,    Ndi\params\D2ListenInterval,max,,"100"
+        HKR,    Ndi\params\D2ListenInterval,default,,"5"
+
+        HKR,    Ndi\params\WFDChannelNumber, ParamDesc,     0,      %WFDChannelNumber%
+        HKR,    Ndi\params\WFDChannelNumber,type,0,"dword"
+        HKR,    Ndi\params\WFDChannelNumber,min,,"1"
+        HKR,    Ndi\params\WFDChannelNumber,max,,"11"
+        HKR,    Ndi\params\WFDChannelNumber,default,,"11"
+
+        HKR,    Ndi\params\EnableLTR, ParamDesc,0, %EnableLTR%
+        HKR,    Ndi\params\EnableLTR, type,     0,         "enum"
+        HKR,    Ndi\params\EnableLTR\enum, "0", 0, %Disabled%
+        HKR,    Ndi\params\EnableLTR\enum, "1", 0, %Enabled%
+        HKR,    Ndi\params\EnableLTR,default,,"1"
+
+        HKR,    Ndi\params\LTR_ActiveValue, ParamDesc,     0,      %LTR_ActiveValue%
+        HKR,    Ndi\params\LTR_ActiveValue,type,0,"dword"
+        HKR,    Ndi\params\LTR_ActiveValue,min,,"0"
+        HKR,    Ndi\params\LTR_ActiveValue,max,,"1023"
+        HKR,    Ndi\params\LTR_ActiveValue,default,,"60"
+
+        HKR,                                    ,"mchan_algo_wfd",                0,      "1"
+        HKR,                                    ,"mchan_bw_wfd",                0,      "40"
+
+[nbg20.channels.reg]
+        ; Chanspec parameters
+        ; 2G-band, 20MHz channels supported
+        HKR,    Ndi\params\Chanspec\enum, "1",   0, "  1(20MHz)"
+        HKR,    Ndi\params\Chanspec\enum, "2",   0, "  2(20MHz)"
+        HKR,    Ndi\params\Chanspec\enum, "3",   0, "  3(20MHz)"
+        HKR,    Ndi\params\Chanspec\enum, "4",   0, "  4(20MHz)"
+        HKR,    Ndi\params\Chanspec\enum, "5",   0, "  5(20MHz)"
+        HKR,    Ndi\params\Chanspec\enum, "6",   0, "  6(20MHz)"
+        HKR,    Ndi\params\Chanspec\enum, "7",   0, "  7(20MHz)"
+        HKR,    Ndi\params\Chanspec\enum, "8",   0, "  8(20MHz)"
+        HKR,    Ndi\params\Chanspec\enum, "9",   0, "  9(20MHz)"
+        HKR,    Ndi\params\Chanspec\enum, "10",   0, " 10(20MHz)"
+        HKR,    Ndi\params\Chanspec\enum, "11",   0, " 11(20MHz)"
+        HKR,    Ndi\params\Chanspec\enum, "12",   0, " 12(20MHz)"
+        HKR,    Ndi\params\Chanspec\enum, "13",   0, " 13(20MHz)"
+        HKR,    Ndi\params\Chanspec\enum, "14",   0, " 14(20MHz)"
+
+[nbg40.channels.reg]
+        ; 2G-band, 40MHz channels supported
+        HKR,    Ndi\params\Chanspec\enum, "1bl",   0, "  1(40MHz-L)"
+        HKR,    Ndi\params\Chanspec\enum, "6bl",   0, "  6(40MHz-L)"
+        HKR,    Ndi\params\Chanspec\enum, "6bu",   0, "  6(40MHz-U)"
+        HKR,    Ndi\params\Chanspec\enum, "11bu",  0, " 11(40MHz-U)"
+
+[gn.options.reg]
+        HKR,    Ndi\params\RoamTrigger, ParamDesc,      0,      %RoamingDecision%
+        HKR,    Ndi\params\RoamTrigger, type,           0,      "enum"
+        HKR,    Ndi\params\RoamTrigger\enum, "3",       0,      %Auto%
+        HKR,    Ndi\params\RoamTrigger\enum, "1",       0,      %OptimizeBandwidth%
+        HKR,    Ndi\params\RoamTrigger\enum, "0",       0,      %Default%
+        HKR,    Ndi\params\RoamTrigger\enum, "2",       0,      %OptimizeDistance%
+        HKR,    Ndi\params\RoamTrigger,default,,"3"
+
+        HKR,    Ndi\params\PLCPHeader, ParamDesc,       0,      %BSSPLCPHeader%
+        HKR,    Ndi\params\PLCPHeader, type,            0,      "enum"
+        HKR,    Ndi\params\PLCPHeader\enum, "-1",       0,      %Long%
+        HKR,    Ndi\params\PLCPHeader\enum, "0",        0,      %AutoShortLong%
+        HKR,    Ndi\params\PLCPHeader,default,,"0"
+
+        HKR,    Ndi\params\IBSSMode, ParamDesc, 0,      %IBSSMode%
+        HKR,    Ndi\params\IBSSMode, type,         0,      "enum"
+        HKR,    Ndi\params\IBSSMode\enum, "0",     0,      %80211bOnly%
+        HKR,    Ndi\params\IBSSMode\enum, "2",     0,      %54gAuto%
+        HKR,    Ndi\params\IBSSMode\enum, "4",     0,      %54gPerformance%
+        HKR,    Ndi\params\IBSSMode\enum, "5",     0,      %80211bgnAuto%
+        HKR,    Ndi\params\IBSSMode,default,,"0"
+
+        HKR,    Ndi\params\IBSSGProtection, ParamDesc,  0,      %IBSS54gtmProtectionMode%
+        HKR,    Ndi\params\IBSSGProtection, type,       0,      "enum"
+        HKR,    Ndi\params\IBSSGProtection\enum, "0",   0,      %Disabled%
+        HKR,    Ndi\params\IBSSGProtection\enum, "2",   0,      %Auto%
+        HKR,    Ndi\params\IBSSGProtection,default,,"2"
+
+        HKR,    Ndi\params\Intolerant, ParamDesc,       0,      %Intolerant%
+        HKR,    Ndi\params\Intolerant, type,         0,      "enum"
+        HKR,    Ndi\params\Intolerant\enum, "0",     0,      %Disabled%
+        HKR,    Ndi\params\Intolerant\enum, "1",     0,      %Enabled%
+        HKR,    Ndi\params\Intolerant,default,,"0"
+
+        HKR,    Ndi\params\OBSSCoex, ParamDesc, 0,      %OBSSCoex%
+        HKR,    Ndi\params\OBSSCoex, type,      0,      "enum"
+        HKR,    Ndi\params\OBSSCoex\enum, "0",  0,      %Disabled%
+        HKR,    Ndi\params\OBSSCoex\enum, "1",  0,      %Enabled%
+        HKR,    Ndi\params\OBSSCoex\enum, "-1", 0,      %Auto%
+        HKR,    Ndi\params\OBSSCoex,default,,"-1"
+
+        ; option to override antenna selection, -1: no override, 0: no selection
+        HKR,                                    ,"mimo_antsel", 0,      "-1"
+
+; options for 40MHz band for n
+[bagn40.options.reg]
+        HKR,    Ndi\params\BandwidthCap, ParamDesc,     0,      "Bandwidth Capability"
+        HKR,    Ndi\params\BandwidthCap, type,          0,      "enum"
+        HKR,    Ndi\params\BandwidthCap\enum, "0",      0,      "11a/b/g:20MHz"
+        HKR,    Ndi\params\BandwidthCap\enum, "1",      0,      "11a/b/g:20/40MHz"
+        HKR,    Ndi\params\BandwidthCap\enum, "2",      0,      "11a:20/40;11bg:20MHz"
+        HKR,    Ndi\params\BandwidthCap,default,,"2"
+
+[wowl.capabilities.enabled.reg]
+        HKR,,   "WakeUpCapabilities", 0x00010001, "0xffffffff"
+
+[wowl.capabilities.disabled.reg]
+        HKR,,   "WakeUpCapabilities", 0x00010001, "0x00000000"
+
+[wowl.std_keywords.reg]
+        HKR, Ndi\params\*WakeOnMagicPacket, ParamDesc,  0, %WakeOnMagicPacket%
+        HKR, Ndi\params\*WakeOnMagicPacket, type,       0, "enum"
+        HKR, Ndi\params\*WakeOnMagicPacket\enum,        "0", 0, %Disabled%
+        HKR, Ndi\params\*WakeOnMagicPacket\enum,        "1", 0, %Enabled%
+        HKR, Ndi\params\*WakeOnMagicPacket,default,,    "1"
+        HKR, Ndi\params\*WakeOnMagicPacket,optional,,   "0"
+
+        HKR, Ndi\params\*WakeOnPattern, ParamDesc,      0, %WakeOnPatternMatch%
+        HKR, Ndi\params\*WakeOnPattern, type,           0, "enum"
+        HKR, Ndi\params\*WakeOnPattern\enum,            "0", 0, %Disabled%
+        HKR, Ndi\params\*WakeOnPattern\enum,            "1", 0, %Enabled%
+        HKR, Ndi\params\*WakeOnPattern,default,,        "1"
+        HKR, Ndi\params\*WakeOnPattern,optional,,       "0"
+
+        HKR, Ndi\params\*PMARPOffload, ParamDesc,       0, %ARPOffload%
+        HKR, Ndi\params\*PMARPOffload, type,            0, "enum"
+        HKR, Ndi\params\*PMARPOffload\enum,             "0", 0, %Disabled%
+        HKR, Ndi\params\*PMARPOffload\enum,             "1", 0, %Enabled%
+        HKR, Ndi\params\*PMARPOffload,default,,         "1"
+        HKR, Ndi\params\*PMARPOffload,optional,,        "0"
+
+        HKR, Ndi\params\*PMNSOffload, ParamDesc,        0, %NSOffload%
+        HKR, Ndi\params\*PMNSOffload, type,             0, "enum"
+        HKR, Ndi\params\*PMNSOffload\enum,              "0", 0, %Disabled%
+        HKR, Ndi\params\*PMNSOffload\enum,              "1", 0, %Enabled%
+        HKR, Ndi\params\*PMNSOffload,default,,          "1"
+        HKR, Ndi\params\*PMNSOffload,optional,,         "0"
+
+        HKR, Ndi\params\*PMWiFiRekeyOffload, ParamDesc, 0, %WiFiRekeyingOffload%
+        HKR, Ndi\params\*PMWiFiRekeyOffload, type,      0, "enum"
+        HKR, Ndi\params\*PMWiFiRekeyOffload\enum,       "0", 0, %Disabled%
+        HKR, Ndi\params\*PMWiFiRekeyOffload\enum,       "1", 0, %Enabled%
+        HKR, Ndi\params\*PMWiFiRekeyOffload,default,,   "1"
+        HKR, Ndi\params\*PMWiFiRekeyOffload,optional,,  "0"
+
+[cs.std_keywords.reg]
+
+	HKR,    Ndi\Params\*PacketCoalescing,  ParamDesc,  0, "Packet Coalescing"
+	HKR,    Ndi\Params\*PacketCoalescing,  Type,       0, "enum"
+	HKR,    Ndi\Params\*PacketCoalescing,  Default,    0, "1"
+	HKR,    Ndi\Params\*PacketCoalescing\enum,   "0",  0, "Disabled"
+	HKR,    Ndi\Params\*PacketCoalescing\enum,   "1",  0, "Enabled"
+
+[strings]
+V_BCM="Broadcom"
+BCM43XX_HELP="The Broadcom 802.11 Network Adapter provides wireless local area networking."
+BCM43XX_Service_DispName="Broadcom 802.11 Network Adapter Driver"
+BCM43XX_DiskName="802.11 Network Adapter Install Disk"
+BCMH43XX_Service_DispName="Broadcom 802.11 USB Network Adapter Driver"
+BCM435SD_DeviceDesc="Broadcom 802.11ac WDI SDIO Adapter"
+BCM4343SD_DeviceDesc="Broadcom 802.11n Wireless SDIO Adapter"
+BCMSDH43XX_Service_DispName="Broadcom 802.11 SDIO Network Adapter Driver"
+54gAuto="54g - Auto"
+54gPerformance="54g - Performance"
+80211bOnly="802.11b Only"
+AntennaDiversity="Antenna Diversity"
+Auto="Auto"
+AutoShortLong="Auto (Short/Long)"
+BSSPLCPHeader="BSS PLCP Header"
+BlueToothCollaboration="Bluetooth Collaboration"
+Default="Default"
+Disable="Disable"
+Disable80211a="Disable 802.11a"
+Disable80211gb="Disable 802.11g/b"
+DisableBands="Disable Bands"
+Disabled="Disabled"
+Enable="Enable"
+Enabled="Enabled"
+FragmentationThreshold="Fragmentation Threshold"
+IBSS54gtmMode="IBSS 54g(tm) Mode"
+IBSS54gtmProtectionMode="IBSS 54g(tm) Protection Mode"
+IBSSMode="IBSS Mode"
+LocallyAdministeredMACAddress="Locally Administered MAC Address"
+Long="Long"
+None="None"
+OptimizeBandwidth="Optimize Bandwidth"
+OptimizeDistance="Optimize Distance"
+PLCPHeader="PLCP Header"
+PowerOutput="Power Output"
+PowerSaveMode="Power Save Mode"
+Prefer80211a="Prefer 802.11a"
+Prefer80211gb="Prefer 802.11g/b"
+RTSThreshold="RTS Threshold"
+RadioEnableDisable="Radio Enable/Disable"
+Rate="Rate"
+RoamingDecision="Roaming Decision"
+XPress_Technology="XPress (TM) Technology"
+Fast="Fast"
+MinimumPowerConsumption="Minimum Power Consumption"
+AssociationRoamPreference="Association Roam Preference"
+BandPreference="Band Preference"
+RoamingTendency="Roam Tendency"
+Aggressive="Aggressive"
+Moderate="Moderate"
+Conservative="Conservative"
+Aux="Aux"
+Main="Main"
+ApCompatibilityMode="AP Compatibility Mode"
+BroaderCompat="Broader Compatibility"
+HigherPerf="Higher Performance"
+WME="WMM"
+Rate_802_11a="Rate (802.11a)"
+Rate_802_11bg="Rate (802.11b/g)"
+WZC_Managed_Ethernet="WZC Managed Ethernet"
+Legacy="Legacy"
+IBSS_Link_Indication="IBSS Link Indication"
+Manage_Wireless_Settings="Manage Wireless Settings"
+DisableRadioUponWiredConnection="Disable Upon Wired Connect"
+SSIDAutoPromote="SSID Autopromote"
+IBSSChannelNumber="WZC IBSS Channel Number"
+IbssAllowed="IBSS Allowed"
+Loose_11h="Loose 11h"
+Strict_11h="Strict 11h"
+vlan_mode="VLAN Priority Support"
+80211bgnAuto="802.11b/g/n Auto"
+80211abOnly="802.11a/b Only"
+80211abgAuto="802.11a/b/g Auto"
+80211abgPerf="802.11a/b/g Performance"
+80211abgnAuto="802.11a/b/g/n Auto"
+PriorityVLANTag="Priority & VLAN"
+PriorityAndVLANDisabled="Priority & VLAN Disabled"
+PriorityAndVLANEnabled="Priority & VLAN Enabled"
+PriorityEnabled="Priority Enabled"
+VLANEnabled="VLAN Enabled"
+Lock_Wireless_Settings="Lock Wireless Settings"
+Usebestrate="Best Rate"
+WakeUpCapabilities="Wake-Up Mode"
+NetPattern="Wake Up Frame"
+Intolerant="40MHz Intolerant"
+All="All"
+LossofAP="LossOfLink"
+Mixed_Mode="Mixed Mode"
+LossNet="WakeUpPkt & LinkLoss"
+OBSSCoex="20/40 Coexistance"
+BTAMP="BT-AMP"
+ListenInterval="Assoc Listen Interval"
+D2ListenInterval="D2 Listen Interval"
+WFDChannelNumber="WFD Channel Number"
+EnableLTR="Enable/Disable LTR"
+LTR_ActiveValue="LTR Active value in microseconds"
+WakeOnMagicPacket="Wake On Magic Packet"
+WakeOnPatternMatch="Wake On Pattern Match"
+ARPOffload="ARP Offload"
+NSOffload="NS Offload"
+WiFiRekeyingOffload="WiFi Rekeying Offload"
+PacketCoalescing="Packet Coalescing"

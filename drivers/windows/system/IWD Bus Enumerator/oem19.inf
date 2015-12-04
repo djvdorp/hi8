@@ -1,0 +1,94 @@
+;
+; iwdbus.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%INTC%
+CatalogFile.ntx86=iwdbusx86.cat
+CatalogFile.ntamd64=iwdbusx64.cat
+DriverVer=06/08/2015,4.5.61.0
+
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+iwdbus.sys  = 1,,
+
+;*****************************************
+; IWDBus  Install Section
+;*****************************************
+
+[Manufacturer]
+%StdMfg%=Standard,NTx86
+
+; For XP and later
+[Standard.NTx86]
+%IWDBus.DeviceDesc%=IWDBus_Device, root\iwdbus
+
+[IWDBus_Device.NT]
+CopyFiles=Drivers_Dir
+
+[IWDBus_Device.NT.HW]
+AddReg=IWDBus_Device.NT.AddReg
+
+[IWDBus_Device.NT.AddReg]                            
+
+
+[Drivers_Dir]
+iwdbus.sys
+
+
+;-------------- Service installation
+[IWDBus_Device.NT.Services]
+AddService = iwdbus,%SPSVCINST_ASSOCSERVICE%, iwdbus_Service_Inst
+
+; -------------- iwdbus driver install sections
+[iwdbus_Service_Inst]
+DisplayName    = %iwdbus.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START 
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\iwdbus.sys
+LoadOrderGroup = Extended Base
+
+
+;
+;--- IWDBus_Device Coinstaller installation ------
+;
+[DestinationDirs]
+IWDBus_Device_CoInstaller_CopyFiles = 11
+
+[IWDBus_Device.NT.CoInstallers]
+AddReg=IWDBus_Device_CoInstaller_AddReg
+CopyFiles=IWDBus_Device_CoInstaller_CopyFiles
+
+[IWDBus_Device_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01009.dll,WdfCoInstaller"
+
+[IWDBus_Device_CoInstaller_CopyFiles]
+WdfCoInstaller01009.dll
+
+[IWDBus_Device.NT.Wdf]
+KmdfService = iwdbus, iwdbus_wdfsect
+[iwdbus_wdfsect]
+KmdfLibraryVersion = 1.9
+
+[SourceDisksFiles]
+WdfCoInstaller01009.dll=1 ; make sure the number matches with SourceDisksNames
+
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+INTC = "Intel Corporation"
+StdMfg = "(Standard system devices)"
+DiskId1 = "IWD Bus Installation Disk #1"
+IWDBus.DeviceDesc = "IWD Bus Enumerator"
+iwdbus.SVCDESC = "IWD Bus Enumerator"
+
