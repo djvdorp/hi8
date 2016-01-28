@@ -1,0 +1,1145 @@
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 4.2.0-16-generic (buildd@lcy01-07) (gcc version 5.2.1 20151003 (Ubuntu 5.2.1-21ubuntu2) ) #19-Ubuntu SMP Thu Oct 8 15:35:06 UTC 2015 (Ubuntu 4.2.0-16.19-generic 4.2.3)
+[    0.000000] Command line: BOOT_IMAGE=/casper/vmlinuz.efi file=/cdrom/preseed/ubuntu.seed boot=casper video=1280x800@60 ---
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Centaur CentaurHauls
+[    0.000000] x86/fpu: Legacy x87 FPU detected.
+[    0.000000] x86/fpu: Using 'lazy' FPU context switches.
+[    0.000000] e820: BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000008efff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000008f000-0x000000000008ffff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x0000000000090000-0x000000000009dfff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009e000-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000001fffffff] usable
+[    0.000000] BIOS-e820: [mem 0x0000000020000000-0x00000000201fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000020200000-0x0000000075ffffff] usable
+[    0.000000] BIOS-e820: [mem 0x0000000076000000-0x0000000076ffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000077000000-0x0000000077a71fff] usable
+[    0.000000] BIOS-e820: [mem 0x0000000077a72000-0x0000000077a7ffff] type 20
+[    0.000000] BIOS-e820: [mem 0x0000000077a80000-0x0000000077afffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000077b00000-0x000000007bb19fff] usable
+[    0.000000] BIOS-e820: [mem 0x000000007bb1a000-0x000000007bb79fff] type 20
+[    0.000000] BIOS-e820: [mem 0x000000007bb7a000-0x000000007bd99fff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000007bd9a000-0x000000007bd9afff] usable
+[    0.000000] BIOS-e820: [mem 0x000000007bd9b000-0x000000007bd9bfff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000007bd9c000-0x000000007bd9dfff] usable
+[    0.000000] BIOS-e820: [mem 0x000000007bd9e000-0x000000007bd9efff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000007bd9f000-0x000000007c7fffff] usable
+[    0.000000] BIOS-e820: [mem 0x000000007cc00000-0x000000007cc39fff] usable
+[    0.000000] BIOS-e820: [mem 0x000000007cc3a000-0x000000007cc46fff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000007cc47000-0x000000007ccb6fff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x000000007ccb7000-0x000000007ccf6fff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x000000007ccf7000-0x000000007ccfffff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000e00f8000-0x00000000e00f8fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed01000-0x00000000fed01fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000ffd00000-0x00000000ffffffff] reserved
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] efi: EFI v2.40 by INSYDE Corp.
+[    0.000000] efi:  ACPI 2.0=0x7ccf6014  ESRT=0x7bb84e10  SMBIOS=0x7bd50000 
+[    0.000000] esrt: Reserving ESRT space from 0x000000007bb84e10 to 0x000000007bb84e48.
+[    0.000000] SMBIOS 2.7 present.
+[    0.000000] DMI: ilife S806/BYT-PA03C, BIOS H1D_S806_206 10/29/2014
+[    0.000000] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.000000] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.000000] e820: last_pfn = 0x7cd00 max_arch_pfn = 0x400000000
+[    0.000000] MTRR default type: uncachable
+[    0.000000] MTRR fixed ranges enabled:
+[    0.000000]   00000-9FFFF write-back
+[    0.000000]   A0000-FFFFF write-protect
+[    0.000000] MTRR variable ranges enabled:
+[    0.000000]   0 base 0FFD00000 mask FFFC00000 write-protect
+[    0.000000]   1 base 000000000 mask F80000000 write-back
+[    0.000000]   2 base 07E000000 mask FFE000000 uncachable
+[    0.000000]   3 base 07D000000 mask FFF000000 uncachable
+[    0.000000]   4 base 07CE00000 mask FFFE00000 uncachable
+[    0.000000]   5 base 07CD00000 mask FFFF00000 uncachable
+[    0.000000]   6 disabled
+[    0.000000]   7 disabled
+[    0.000000] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WC  UC- WT  
+[    0.000000] Scanning 1 areas for low memory corruption
+[    0.000000] Base memory trampoline at [ffff880000098000] 98000 size 24576
+[    0.000000] init_memory_mapping: [mem 0x00000000-0x000fffff]
+[    0.000000]  [mem 0x00000000-0x000fffff] page 4k
+[    0.000000] BRK [0x02ff0000, 0x02ff0fff] PGTABLE
+[    0.000000] BRK [0x02ff1000, 0x02ff1fff] PGTABLE
+[    0.000000] BRK [0x02ff2000, 0x02ff2fff] PGTABLE
+[    0.000000] init_memory_mapping: [mem 0x7b800000-0x7b9fffff]
+[    0.000000]  [mem 0x7b800000-0x7b9fffff] page 2M
+[    0.000000] BRK [0x02ff3000, 0x02ff3fff] PGTABLE
+[    0.000000] init_memory_mapping: [mem 0x60000000-0x75ffffff]
+[    0.000000]  [mem 0x60000000-0x75ffffff] page 2M
+[    0.000000] init_memory_mapping: [mem 0x77000000-0x77a71fff]
+[    0.000000]  [mem 0x77000000-0x779fffff] page 2M
+[    0.000000]  [mem 0x77a00000-0x77a71fff] page 4k
+[    0.000000] BRK [0x02ff4000, 0x02ff4fff] PGTABLE
+[    0.000000] init_memory_mapping: [mem 0x77b00000-0x7b7fffff]
+[    0.000000]  [mem 0x77b00000-0x77bfffff] page 4k
+[    0.000000]  [mem 0x77c00000-0x7b7fffff] page 2M
+[    0.000000] init_memory_mapping: [mem 0x40000000-0x5fffffff]
+[    0.000000]  [mem 0x40000000-0x5fffffff] page 2M
+[    0.000000] init_memory_mapping: [mem 0x00100000-0x1fffffff]
+[    0.000000]  [mem 0x00100000-0x001fffff] page 4k
+[    0.000000]  [mem 0x00200000-0x1fffffff] page 2M
+[    0.000000] init_memory_mapping: [mem 0x20200000-0x3fffffff]
+[    0.000000]  [mem 0x20200000-0x3fffffff] page 2M
+[    0.000000] init_memory_mapping: [mem 0x7ba00000-0x7bb19fff]
+[    0.000000]  [mem 0x7ba00000-0x7bb19fff] page 4k
+[    0.000000] BRK [0x02ff5000, 0x02ff5fff] PGTABLE
+[    0.000000] init_memory_mapping: [mem 0x7bd9a000-0x7bd9afff]
+[    0.000000]  [mem 0x7bd9a000-0x7bd9afff] page 4k
+[    0.000000] init_memory_mapping: [mem 0x7bd9c000-0x7bd9dfff]
+[    0.000000]  [mem 0x7bd9c000-0x7bd9dfff] page 4k
+[    0.000000] init_memory_mapping: [mem 0x7bd9f000-0x7c7fffff]
+[    0.000000]  [mem 0x7bd9f000-0x7bdfffff] page 4k
+[    0.000000]  [mem 0x7be00000-0x7c7fffff] page 2M
+[    0.000000] init_memory_mapping: [mem 0x7cc00000-0x7cc39fff]
+[    0.000000]  [mem 0x7cc00000-0x7cc39fff] page 4k
+[    0.000000] init_memory_mapping: [mem 0x7ccf7000-0x7ccfffff]
+[    0.000000]  [mem 0x7ccf7000-0x7ccfffff] page 4k
+[    0.000000] RAMDISK: [mem 0x35119000-0x36883fff]
+[    0.000000] ACPI: Early table checksum verification disabled
+[    0.000000] ACPI: RSDP 0x000000007CCF6014 000024 (v02 INSYDE)
+[    0.000000] ACPI: XSDT 0x000000007CCCE188 0000EC (v01 INSYDE INSYDE   00000003      01000013)
+[    0.000000] ACPI: FACP 0x000000007CCEF000 00010C (v05 INSYDE INSYDE   00000003 ACPI 00040000)
+[    0.000000] ACPI: DSDT 0x000000007CCDA000 00FC4A (v02 INSYDE INSYDE   00000003 ACPI 00040000)
+[    0.000000] ACPI: UEFI 0x000000007CCF5000 000236 (v01 INSYDE INSYDE   00000001 ACPI 00040000)
+[    0.000000] ACPI: TCPA 0x000000007CCF4000 000032 (v02 INSYDE INSYDE   00000000 ACPI 00040000)
+[    0.000000] ACPI: MSDM 0x000000007CCF3000 000055 (v03 INSYDE INSYDE   00000001 ACPI 00040000)
+[    0.000000] ACPI: UEFI 0x000000007CCF2000 000042 (v01 INSYDE INSYDE   00000000 ACPI 00040000)
+[    0.000000] ACPI: OEM0 0x000000007CCF1000 000084 (v05 INSYDE INSYDE   00000003 ACPI 00040000)
+[    0.000000] ACPI: DBG2 0x000000007CCF0000 000072 (v00 INSYDE INSYDE   00000003 ACPI 00040000)
+[    0.000000] ACPI: HPET 0x000000007CCEE000 000038 (v01 INSYDE INSYDE   00000003 ACPI 00040000)
+[    0.000000] ACPI: LPIT 0x000000007CCED000 000104 (v01 INSYDE INSYDE   00000003 ACPI 00040000)
+[    0.000000] ACPI: APIC 0x000000007CCEC000 00006C (v03 INSYDE INSYDE   00000003 ACPI 00040000)
+[    0.000000] ACPI: MCFG 0x000000007CCEB000 00003C (v01 INSYDE INSYDE   00000003 ACPI 00040000)
+[    0.000000] ACPI: SLIC 0x000000007CCEA000 000176 (v01 INSYDE INSYDE   00000003 ACPI 00040000)
+[    0.000000] ACPI: SSDT 0x000000007CCD9000 000603 (v01 INSYDE CpuDptf  00000003 ACPI 00040000)
+[    0.000000] ACPI: SSDT 0x000000007CCD6000 002499 (v01 INSYDE DptfTab  00000003 ACPI 00040000)
+[    0.000000] ACPI: SSDT 0x000000007CCD5000 000058 (v01 INSYDE LowPwrM  00000003 ACPI 00040000)
+[    0.000000] ACPI: SSDT 0x000000007CCD4000 0000FF (v01 INSYDE SoCDptf  00000003 ACPI 00040000)
+[    0.000000] ACPI: SSDT 0x000000007CCD3000 00043A (v01 INSYDE Tpm2Tabl 00001000 ACPI 00040000)
+[    0.000000] ACPI: TPM2 0x000000007CCD2000 000034 (v03 INSYDE INSYDE   00000000 ACPI 00040000)
+[    0.000000] ACPI: SSDT 0x000000007CCD1000 000763 (v01 INSYDE CpuPm    00003000 ACPI 00040000)
+[    0.000000] ACPI: SSDT 0x000000007CCD0000 000290 (v01 INSYDE Cpu0Tst  00003000 ACPI 00040000)
+[    0.000000] ACPI: SSDT 0x000000007CCCF000 00017A (v01 INSYDE ApTst    00003000 ACPI 00040000)
+[    0.000000] ACPI: SSDT 0x000000007CCCD000 000E87 (v01 INSYDE Q2SWmiTb 00001000 ACPI 00040000)
+[    0.000000] ACPI: FPDT 0x000000007CCCC000 000044 (v01 INSYDE INSYDE   00000002 ACPI 00040000)
+[    0.000000] ACPI: CSRT 0x000000007CCCB000 00014C (v00 INSYDE INSYDE   00000005 ACPI 00040000)
+[    0.000000] ACPI: BGRT 0x000000007CCCA000 000038 (v01 INSYDE INSYDE   00000001 ACPI 00040000)
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] No NUMA configuration found
+[    0.000000] Faking a node at [mem 0x0000000000000000-0x000000007ccfffff]
+[    0.000000] NODE_DATA(0) allocated [mem 0x7cc35000-0x7cc39fff]
+[    0.000000]  [ffffea0000000000-ffffea0001ffffff] PMD -> [ffff880074000000-ffff880075ffffff] on node 0
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.000000]   DMA32    [mem 0x0000000001000000-0x000000007ccfffff]
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000001000-0x000000000008efff]
+[    0.000000]   node   0: [mem 0x0000000000090000-0x000000000009dfff]
+[    0.000000]   node   0: [mem 0x0000000000100000-0x000000001fffffff]
+[    0.000000]   node   0: [mem 0x0000000020200000-0x0000000075ffffff]
+[    0.000000]   node   0: [mem 0x0000000077000000-0x0000000077a71fff]
+[    0.000000]   node   0: [mem 0x0000000077b00000-0x000000007bb19fff]
+[    0.000000]   node   0: [mem 0x000000007bd9a000-0x000000007bd9afff]
+[    0.000000]   node   0: [mem 0x000000007bd9c000-0x000000007bd9dfff]
+[    0.000000]   node   0: [mem 0x000000007bd9f000-0x000000007c7fffff]
+[    0.000000]   node   0: [mem 0x000000007cc00000-0x000000007cc39fff]
+[    0.000000]   node   0: [mem 0x000000007ccf7000-0x000000007ccfffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000001000-0x000000007ccfffff]
+[    0.000000] On node 0 totalpages: 504527
+[    0.000000]   DMA zone: 64 pages used for memmap
+[    0.000000]   DMA zone: 22 pages reserved
+[    0.000000]   DMA zone: 3996 pages, LIFO batch:0
+[    0.000000]   DMA32 zone: 7924 pages used for memmap
+[    0.000000]   DMA32 zone: 500531 pages, LIFO batch:31
+[    0.000000] x86/hpet: Will disable the HPET for this platform because it's not reliable
+[    0.000000] Reserving Intel graphics stolen memory at 0x7cf00000-0x7eefffff
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] IOAPIC[0]: apic_id 2, version 32, address 0xfec00000, GSI 0-86
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.000000] Using ACPI (MADT) for SMP configuration information
+[    0.000000] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.000000] smpboot: Allowing 4 CPUs, 0 hotplug CPUs
+[    0.000000] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x0008f000-0x0008ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x0009e000-0x0009ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000a0000-0x000fffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x20000000-0x201fffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x76000000-0x76ffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x77a72000-0x77a7ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x77a80000-0x77afffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x7bb1a000-0x7bb79fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x7bb7a000-0x7bd99fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x7bd9b000-0x7bd9bfff]
+[    0.000000] PM: Registered nosave memory: [mem 0x7bd9e000-0x7bd9efff]
+[    0.000000] PM: Registered nosave memory: [mem 0x7c800000-0x7cbfffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x7cc3a000-0x7cc46fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x7cc47000-0x7ccb6fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x7ccb7000-0x7ccf6fff]
+[    0.000000] e820: [mem 0x7ef00000-0xe00f7fff] available for PCI devices
+[    0.000000] Booting paravirtualized kernel on bare hardware
+[    0.000000] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[    0.000000] setup_percpu: NR_CPUS:256 nr_cpumask_bits:256 nr_cpu_ids:4 nr_node_ids:1
+[    0.000000] PERCPU: Embedded 33 pages/cpu @ffff88007b800000 s96728 r8192 d30248 u524288
+[    0.000000] pcpu-alloc: s96728 r8192 d30248 u524288 alloc=1*2097152
+[    0.000000] pcpu-alloc: [0] 0 1 2 3 
+[    0.000000] Built 1 zonelists in Node order, mobility grouping on.  Total pages: 496517
+[    0.000000] Policy zone: DMA32
+[    0.000000] Kernel command line: BOOT_IMAGE=/casper/vmlinuz.efi file=/cdrom/preseed/ubuntu.seed boot=casper video=1280x800@60 ---
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Calgary: detecting Calgary via BIOS EBDA area
+[    0.000000] Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+[    0.000000] Memory: 1906476K/2018108K available (8146K kernel code, 1237K rwdata, 3800K rodata, 1460K init, 1292K bss, 111632K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	Build-time adjustment of leaf fanout to 64.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=4.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=64, nr_cpu_ids=4
+[    0.000000] NR_IRQS:16640 nr_irqs:1024 0
+[    0.000000] 	Offload RCU callbacks from all CPUs
+[    0.000000] 	Offload RCU callbacks from CPUs: 0-3.
+[    0.000000] Console: colour dummy device 80x25
+[    0.000000] console [tty0] enabled
+[    0.000000] Maximum core-clock to bus-clock ratio: 0x10
+[    0.000000] Resolved frequency ID: 0, frequency: 83200 KHz
+[    0.000000] TSC runs at 1331200 KHz
+[    0.000000] lapic_timer_frequency = 332800
+[    0.000000] tsc: Detected 1331.200 MHz processor
+[    0.000056] Calibrating delay loop (skipped), value calculated using timer frequency.. 2662.40 BogoMIPS (lpj=5324800)
+[    0.000079] pid_max: default: 32768 minimum: 301
+[    0.000100] ACPI: Core revision 20150619
+[    0.055862] ACPI: All ACPI Tables successfully acquired
+[    0.057481] Security Framework initialized
+[    0.057521] AppArmor: AppArmor initialized
+[    0.057533] Yama: becoming mindful.
+[    0.057982] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.059402] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.060055] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.060082] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.060620] Initializing cgroup subsys blkio
+[    0.060642] Initializing cgroup subsys memory
+[    0.060673] Initializing cgroup subsys devices
+[    0.060689] Initializing cgroup subsys freezer
+[    0.060704] Initializing cgroup subsys net_cls
+[    0.060719] Initializing cgroup subsys perf_event
+[    0.060739] Initializing cgroup subsys net_prio
+[    0.060755] Initializing cgroup subsys hugetlb
+[    0.060798] CPU: Physical Processor ID: 0
+[    0.060810] CPU: Processor Core ID: 0
+[    0.060824] ENERGY_PERF_BIAS: Set to 'normal', was 'performance'
+[    0.060836] ENERGY_PERF_BIAS: View and update with x86_energy_perf_policy(8)
+[    0.065750] mce: CPU supports 6 MCE banks
+[    0.065770] CPU0: Thermal monitoring enabled (TM1)
+[    0.065784] process: using mwait in idle threads
+[    0.065799] Last level iTLB entries: 4KB 48, 2MB 0, 4MB 0
+[    0.065811] Last level dTLB entries: 4KB 128, 2MB 16, 4MB 16, 1GB 0
+[    0.066053] Freeing SMP alternatives memory: 28K (ffffffff81ea4000 - ffffffff81eab000)
+[    0.068790] Ignoring BGRT: invalid status 0 (expected 1)
+[    0.072894] ftrace: allocating 30905 entries in 121 pages
+[    0.099412] TSC deadline timer enabled
+[    0.099421] smpboot: CPU0: Intel(R) Atom(TM) CPU  Z3736F @ 1.33GHz (fam: 06, model: 37, stepping: 08)
+[    0.099493] Performance Events: PEBS fmt2+, 8-deep LBR, Silvermont events, full-width counters, Intel PMU driver.
+[    0.099531] ... version:                3
+[    0.099541] ... bit width:              40
+[    0.099550] ... generic registers:      2
+[    0.099560] ... value mask:             000000ffffffffff
+[    0.099570] ... max period:             000000ffffffffff
+[    0.099580] ... fixed-purpose events:   3
+[    0.099589] ... event mask:             0000000700000003
+[    0.101822] x86: Booting SMP configuration:
+[    0.101838] .... node  #0, CPUs:      #1
+[    0.110075] NMI watchdog: enabled on all CPUs, permanently consumes one hw-PMU counter.
+[    0.110446]  #2 #3
+[    0.126822] x86: Booted up 1 node, 4 CPUs
+[    0.126841] smpboot: Total of 4 processors activated (10649.60 BogoMIPS)
+[    0.128032] devtmpfs: initialized
+[    0.137394] evm: security.selinux
+[    0.137407] evm: security.SMACK64
+[    0.137417] evm: security.SMACK64EXEC
+[    0.137426] evm: security.SMACK64TRANSMUTE
+[    0.137435] evm: security.SMACK64MMAP
+[    0.137444] evm: security.ima
+[    0.137453] evm: security.capability
+[    0.137617] PM: Registering ACPI NVS region [mem 0x0008f000-0x0008ffff] (4096 bytes)
+[    0.137636] PM: Registering ACPI NVS region [mem 0x7cc47000-0x7ccb6fff] (458752 bytes)
+[    0.137870] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.138113] pinctrl core: initialized pinctrl subsystem
+[    0.138401] RTC time: 17:28:49, date: 01/28/16
+[    0.138772] NET: Registered protocol family 16
+[    0.139564] cpuidle: using governor ladder
+[    0.143567] cpuidle: using governor menu
+[    0.143766] ACPI: bus type PCI registered
+[    0.143779] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.143991] PCI: MMCONFIG for domain 0000 [bus 00-3f] at [mem 0xe0000000-0xe3ffffff] (base 0xe0000000)
+[    0.144012] PCI: not using MMCONFIG
+[    0.144023] PCI: Using configuration type 1 for base access
+[    0.152650] ACPI: Added _OSI(Module Device)
+[    0.152666] ACPI: Added _OSI(Processor Device)
+[    0.152677] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.152688] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.185190] ACPI: Dynamic OEM Table Load:
+[    0.185230] ACPI: SSDT 0xFFFF88007AB82800 000585 (v01 PmRef  Cpu0Ist  00003000 INTL 20130117)
+[    0.187329] ACPI: Dynamic OEM Table Load:
+[    0.187363] ACPI: SSDT 0xFFFF88007AB83000 000433 (v01 PmRef  Cpu0Cst  00003001 INTL 20130117)
+[    0.190095] ACPI: Dynamic OEM Table Load:
+[    0.190127] ACPI: SSDT 0xFFFF88007C002200 00015F (v01 PmRef  ApIst    00003000 INTL 20130117)
+[    0.192167] ACPI: Dynamic OEM Table Load:
+[    0.192198] ACPI: SSDT 0xFFFF88007ABA09C0 00008D (v01 PmRef  ApCst    00003000 INTL 20130117)
+[    0.196503] ACPI: Interpreter enabled
+[    0.196530] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S1_] (20150619/hwxface-580)
+[    0.196559] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S2_] (20150619/hwxface-580)
+[    0.196586] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S3_] (20150619/hwxface-580)
+[    0.196613] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S4_] (20150619/hwxface-580)
+[    0.196649] ACPI: (supports S0 S5)
+[    0.196661] ACPI: Using IOAPIC for interrupt routing
+[    0.196732] PCI: MMCONFIG for domain 0000 [bus 00-3f] at [mem 0xe0000000-0xe3ffffff] (base 0xe0000000)
+[    0.203923] [Firmware Info]: PCI: MMCONFIG at [mem 0xe0000000-0xe3ffffff] not reserved in ACPI motherboard resources
+[    0.203944] PCI: not using MMCONFIG
+[    0.203991] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.207031] ACPI: Power Resource [USBC] (on)
+[    0.207927] ACPI: Power Resource [WWPR] (off)
+[    0.215976] ACPI: Power Resource [PLPE] (on)
+[    0.228634] ACPI: Power Resource [CLK0] (on)
+[    0.228776] ACPI: Power Resource [CLK1] (on)
+[    0.229837] ACPI: Power Resource [P28P] (off)
+[    0.229974] ACPI: Power Resource [P18P] (off)
+[    0.230613] ACPI: Power Resource [P15P] (off)
+[    0.238935] ACPI: Power Resource [P28X] (off)
+[    0.239079] ACPI: Power Resource [P18X] (off)
+[    0.239231] ACPI: Power Resource [P33P] (off)
+[    0.239371] ACPI: Power Resource [P28T] (off)
+[    0.239506] ACPI: Power Resource [P18T] (off)
+[    0.239646] ACPI: Power Resource [P1XT] (off)
+[    0.249928] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.249953] acpi PNP0A08:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
+[    0.250089] \_SB_.PCI0:_OSC invalid UUID
+[    0.250094] _OSC request data:1 1e 0 
+[    0.250106] acpi PNP0A08:00: _OSC failed (AE_ERROR); disabling ASPM
+[    0.250518] acpi PNP0A08:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[    0.250855] PCI host bridge to bus 0000:00
+[    0.250872] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.250887] pci_bus 0000:00: root bus resource [io  0x0070-0x0077]
+[    0.250900] pci_bus 0000:00: root bus resource [io  0x0000-0x006f window]
+[    0.250915] pci_bus 0000:00: root bus resource [io  0x0078-0x0cf7 window]
+[    0.250928] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.250942] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.250961] pci_bus 0000:00: root bus resource [mem 0x000c0000-0x000dffff window]
+[    0.250979] pci_bus 0000:00: root bus resource [mem 0x000e0000-0x000fffff window]
+[    0.250997] pci_bus 0000:00: root bus resource [mem 0x90c00000-0x90ffffff window]
+[    0.251016] pci_bus 0000:00: root bus resource [mem 0x7cf00001-0x7ef00000 window]
+[    0.251034] pci_bus 0000:00: root bus resource [mem 0x80000000-0x90affffe window]
+[    0.251052] pci_bus 0000:00: root bus resource [mem 0xfed40000-0xfed40fff window]
+[    0.251082] pci 0000:00:00.0: [8086:0f00] type 00 class 0x060000
+[    0.251291] pci 0000:00:02.0: [8086:0f31] type 00 class 0x030000
+[    0.251321] pci 0000:00:02.0: reg 0x10: [mem 0x90000000-0x903fffff]
+[    0.251339] pci 0000:00:02.0: reg 0x18: [mem 0x80000000-0x8fffffff pref]
+[    0.251356] pci 0000:00:02.0: reg 0x20: [io  0x1000-0x1007]
+[    0.251569] pci 0000:00:14.0: [8086:0f35] type 00 class 0x0c0330
+[    0.251607] pci 0000:00:14.0: reg 0x10: [mem 0x90a00000-0x90a0ffff 64bit]
+[    0.251674] pci 0000:00:14.0: PME# supported from D3hot D3cold
+[    0.251877] pci 0000:00:16.0: [8086:0f37] type 00 class 0x0c0380
+[    0.251906] pci 0000:00:16.0: reg 0x10: [mem 0x90400000-0x905fffff]
+[    0.251920] pci 0000:00:16.0: reg 0x14: [mem 0x90a2c000-0x90a2cfff]
+[    0.251985] pci 0000:00:16.0: PME# supported from D0 D3hot
+[    0.252170] pci 0000:00:1a.0: [8086:0f18] type 00 class 0x108000
+[    0.252220] pci 0000:00:1a.0: reg 0x10: [mem 0x90900000-0x909fffff]
+[    0.252239] pci 0000:00:1a.0: reg 0x14: [mem 0x90800000-0x908fffff]
+[    0.252342] pci 0000:00:1a.0: PME# supported from D0 D3hot
+[    0.252526] pci 0000:00:1f.0: [8086:0f1c] type 00 class 0x060100
+[    0.253753] ACPI: PCI Interrupt Link [LNKA] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.253966] ACPI: PCI Interrupt Link [LNKB] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.254175] ACPI: PCI Interrupt Link [LNKC] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.254383] ACPI: PCI Interrupt Link [LNKD] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.254592] ACPI: PCI Interrupt Link [LNKE] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.254801] ACPI: PCI Interrupt Link [LNKF] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.255011] ACPI: PCI Interrupt Link [LNKG] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.255219] ACPI: PCI Interrupt Link [LNKH] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.270099] vgaarb: setting as boot device: PCI:0000:00:02.0
+[    0.270118] vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
+[    0.270136] vgaarb: loaded
+[    0.270146] vgaarb: bridge control possible 0000:00:02.0
+[    0.270946] SCSI subsystem initialized
+[    0.271084] libata version 3.00 loaded.
+[    0.271167] ACPI: bus type USB registered
+[    0.271233] usbcore: registered new interface driver usbfs
+[    0.271277] usbcore: registered new interface driver hub
+[    0.271344] usbcore: registered new device driver usb
+[    0.271971] PCI: Using ACPI for IRQ routing
+[    0.271986] PCI: pci_cache_line_size set to 64 bytes
+[    0.272019] Expanded resource reserved due to conflict with PCI Bus 0000:00
+[    0.272033] e820: reserve RAM buffer [mem 0x0008f000-0x0008ffff]
+[    0.272039] e820: reserve RAM buffer [mem 0x0009e000-0x0009ffff]
+[    0.272043] e820: reserve RAM buffer [mem 0x76000000-0x77ffffff]
+[    0.272048] e820: reserve RAM buffer [mem 0x77a72000-0x77ffffff]
+[    0.272052] e820: reserve RAM buffer [mem 0x7bb1a000-0x7bffffff]
+[    0.272057] e820: reserve RAM buffer [mem 0x7bd9b000-0x7bffffff]
+[    0.272062] e820: reserve RAM buffer [mem 0x7bd9e000-0x7bffffff]
+[    0.272066] e820: reserve RAM buffer [mem 0x7c800000-0x7fffffff]
+[    0.272072] e820: reserve RAM buffer [mem 0x7cc3a000-0x7fffffff]
+[    0.272078] e820: reserve RAM buffer [mem 0x7cd00000-0x7fffffff]
+[    0.272389] NetLabel: Initializing
+[    0.272401] NetLabel:  domain hash size = 128
+[    0.272411] NetLabel:  protocols = UNLABELED CIPSOv4
+[    0.272448] NetLabel:  unlabeled traffic allowed by default
+[    0.272684] clocksource: Switched to clocksource refined-jiffies
+[    0.289852] AppArmor: AppArmor Filesystem Enabled
+[    0.290068] pnp: PnP ACPI init
+[    0.290232] pnp 00:00: Plug and Play ACPI device, IDs PNP0b00 (active)
+[    0.290414] system 00:01: [io  0x0680-0x069f] has been reserved
+[    0.290431] system 00:01: [io  0x0400-0x047f] has been reserved
+[    0.290446] system 00:01: [io  0x0500-0x05fe] has been reserved
+[    0.290460] system 00:01: [io  0x0600-0x061f] has been reserved
+[    0.290474] system 00:01: [io  0x164e-0x164f] has been reserved
+[    0.290492] system 00:01: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.290771] pnp 00:02: Plug and Play ACPI device, IDs PNP0501 (active)
+[    0.295435] pnp: PnP ACPI: found 3 devices
+[    0.301574] pci_bus 0000:00: resource 4 [io  0x0070-0x0077]
+[    0.301583] pci_bus 0000:00: resource 5 [io  0x0000-0x006f window]
+[    0.301589] pci_bus 0000:00: resource 6 [io  0x0078-0x0cf7 window]
+[    0.301596] pci_bus 0000:00: resource 7 [io  0x0d00-0xffff window]
+[    0.301602] pci_bus 0000:00: resource 8 [mem 0x000a0000-0x000bffff window]
+[    0.301608] pci_bus 0000:00: resource 9 [mem 0x000c0000-0x000dffff window]
+[    0.301614] pci_bus 0000:00: resource 10 [mem 0x000e0000-0x000fffff window]
+[    0.301620] pci_bus 0000:00: resource 11 [mem 0x90c00000-0x90ffffff window]
+[    0.301626] pci_bus 0000:00: resource 12 [mem 0x7cf00001-0x7ef00000 window]
+[    0.301632] pci_bus 0000:00: resource 13 [mem 0x80000000-0x90affffe window]
+[    0.301639] pci_bus 0000:00: resource 14 [mem 0xfed40000-0xfed40fff window]
+[    0.301723] NET: Registered protocol family 2
+[    0.302135] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.302267] TCP bind hash table entries: 16384 (order: 6, 262144 bytes)
+[    0.302394] TCP: Hash tables configured (established 16384 bind 16384)
+[    0.302468] UDP hash table entries: 1024 (order: 3, 32768 bytes)
+[    0.302509] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+[    0.302643] NET: Registered protocol family 1
+[    0.302691] pci 0000:00:02.0: Video device with shadowed ROM
+[    0.303068] PCI: CLS 64 bytes, default 64
+[    0.303232] Trying to unpack rootfs image as initramfs...
+[   13.199669] Freeing initrd memory: 23980K (ffff880035119000 - ffff880036884000)
+[   13.200044] microcode: CPU0 sig=0x30678, pf=0x2, revision=0x82b
+[   13.200074] microcode: CPU1 sig=0x30678, pf=0x2, revision=0x82b
+[   13.200102] microcode: CPU2 sig=0x30678, pf=0x2, revision=0x82b
+[   13.200134] microcode: CPU3 sig=0x30678, pf=0x2, revision=0x82b
+[   13.200308] microcode: Microcode Update Driver: v2.00 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+[   13.200581] Scanning for low memory corruption every 60 seconds
+[   13.201543] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[   13.201593] Initialise system trusted keyring
+[   13.201655] audit: initializing netlink subsys (disabled)
+[   13.201713] audit: type=2000 audit(1454002143.744:1): initialized
+[   13.202499] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+[   13.207391] zpool: loaded
+[   13.207407] zbud: loaded
+[   13.207882] VFS: Disk quotas dquot_6.6.0
+[   13.208001] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[   13.209592] fuse init (API version 7.23)
+[   13.210022] Key type big_key registered
+[   13.210801] Key type asymmetric registered
+[   13.210819] Asymmetric key parser 'x509' registered
+[   13.210865] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 249)
+[   13.210970] io scheduler noop registered
+[   13.210989] io scheduler deadline registered (default)
+[   13.211137] io scheduler cfq registered
+[   13.211405] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+[   13.211442] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+[   13.211571] efifb: probing for efifb
+[   13.211615] efifb: framebuffer at 0x80000000, mapped to 0xffffc90001000000, using 9024k, total 9024k
+[   13.211634] efifb: mode is 1200x1920x32, linelength=4800, pages=1
+[   13.211644] efifb: scrolling: redraw
+[   13.211656] efifb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+[   13.232943] Console: switching to colour frame buffer device 150x120
+[   13.253939] fb0: EFI VGA frame buffer device
+[   13.254035] intel_idle: MWAIT substates: 0x33000020
+[   13.254040] intel_idle: v0.4 model 0x37
+[   13.254044] intel_idle: lapic_timer_reliable_states 0xffffffff
+[   13.254654] ACPI Exception: AE_ERROR, Returned by Handler for [GeneralPurposeIo] (20150619/evregion-297)
+[   13.254817] ACPI Error: Method parse/execution failed [\_SB_.ADP1._PSR] (Node ffff88007b4bb190), AE_ERROR (20150619/psparse-536)
+[   13.255023] ACPI Exception: AE_ERROR, Error reading AC Adapter state (20150619/ac-132)
+[   13.259896] [Firmware Bug]: No valid trip found
+[   13.260102] GHES: HEST is not enabled!
+[   13.260432] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[   13.280691] 00:02: ttyS0 at I/O 0x3f8 (irq = 199, base_baud = 115200) is a 16550A
+[   13.285329] hpet: number irqs doesn't agree with number of timers
+[   13.285594] Linux agpgart interface v0.103
+[   13.292540] brd: module loaded
+[   13.295512] loop: module loaded
+[   13.296255] libphy: Fixed MDIO Bus: probed
+[   13.296328] tun: Universal TUN/TAP device driver, 1.6
+[   13.296406] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[   13.296620] PPP generic driver version 2.4.2
+[   13.297119] xhci_hcd 0000:00:14.0: xHCI Host Controller
+[   13.297216] xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 1
+[   13.297735] xhci_hcd 0000:00:14.0: hcc params 0x200077c1 hci version 0x100 quirks 0x00009810
+[   13.297868] xhci_hcd 0000:00:14.0: cache line size of 64 is not supported
+[   13.298052] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[   13.298158] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   13.298267] usb usb1: Product: xHCI Host Controller
+[   13.298342] usb usb1: Manufacturer: Linux 4.2.0-16-generic xhci-hcd
+[   13.298436] usb usb1: SerialNumber: 0000:00:14.0
+[   13.298860] hub 1-0:1.0: USB hub found
+[   13.298945] hub 1-0:1.0: 6 ports detected
+[   13.695391] xhci_hcd 0000:00:14.0: xHCI Host Controller
+[   13.695643] xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 2
+[   13.695923] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003
+[   13.696029] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   13.696138] usb usb2: Product: xHCI Host Controller
+[   13.696213] usb usb2: Manufacturer: Linux 4.2.0-16-generic xhci-hcd
+[   13.696307] usb usb2: SerialNumber: 0000:00:14.0
+[   13.696820] hub 2-0:1.0: USB hub found
+[   13.696904] hub 2-0:1.0: 1 port detected
+[   13.697360] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[   13.697473] ehci-pci: EHCI PCI platform driver
+[   13.697575] ehci-platform: EHCI generic platform driver
+[   13.697724] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[   13.697828] ohci-pci: OHCI PCI platform driver
+[   13.697926] ohci-platform: OHCI generic platform driver
+[   13.698046] uhci_hcd: USB Universal Host Controller Interface driver
+[   13.698270] i8042: PNP: No PS/2 controller found. Probing ports directly.
+[   13.974010] usb 1-1: new high-speed USB device number 2 using xhci_hcd
+[   14.113030] usb 1-1: New USB device found, idVendor=1a40, idProduct=0101
+[   14.113137] usb 1-1: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[   14.113245] usb 1-1: Product: USB 2.0 Hub
+[   14.113748] hub 1-1:1.0: USB hub found
+[   14.113842] hub 1-1:1.0: 4 ports detected
+[   14.331765] usb 1-1.2: new low-speed USB device number 3 using xhci_hcd
+[   14.430526] usb 1-1.2: New USB device found, idVendor=04d9, idProduct=2013
+[   14.430636] usb 1-1.2: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[   14.430758] usb 1-1.2: Product: daskeyboard
+[   14.431099] usb 1-1.2: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[   14.431243] usb 1-1.2: ep 0x82 - rounding interval to 64 microframes, ep desc says 80 microframes
+[   14.496550] usb 1-1.3: new low-speed USB device number 4 using xhci_hcd
+[   14.578816] usb 1-1.3: New USB device found, idVendor=046d, idProduct=c069
+[   14.578925] usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[   14.579034] usb 1-1.3: Product: USB Laser Mouse
+[   14.579105] usb 1-1.3: Manufacturer: Logitech
+[   14.579423] usb 1-1.3: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[   14.645605] usb 1-1.4: new high-speed USB device number 5 using xhci_hcd
+[   14.724262] usb 1-1.4: New USB device found, idVendor=090c, idProduct=1000
+[   14.724371] usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   14.724480] usb 1-1.4: Product: USB Flash Drive
+[   14.724551] usb 1-1.4: Manufacturer: USB 2.0
+[   14.724618] usb 1-1.4: SerialNumber: 1412000000024726
+[   14.724952] usb 1-1.4: ep 0x81 - rounding interval to 128 microframes, ep desc says 255 microframes
+[   14.725097] usb 1-1.4: ep 0x2 - rounding interval to 128 microframes, ep desc says 255 microframes
+[   14.732677] i8042: No controller found
+[   14.732768] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x13303f810e3, max_idle_ns: 440795235405 ns
+[   14.733052] clocksource: Switched to clocksource tsc
+[   14.733417] mousedev: PS/2 mouse device common for all mice
+[   14.733737] ACPI Warning: Could not enable fixed event - RealTimeClock (4) (20150619/evxface-654)
+[   14.734188] rtc_cmos 00:00: rtc core: registered rtc_cmos as rtc0
+[   14.734327] rtc_cmos 00:00: alarms up to one month, y3k, 242 bytes nvram
+[   14.734449] i2c /dev entries driver
+[   14.734764] device-mapper: uevent: version 1.0.3
+[   14.735259] device-mapper: ioctl: 4.33.0-ioctl (2015-8-18) initialised: dm-devel@redhat.com
+[   14.735416] Intel P-state driver initializing.
+[   14.735992] ledtrig-cpu: registered to indicate activity on CPUs
+[   14.736247] EFI Variables Facility v0.08 2004-May-17
+[   14.754853] PCCT header not found.
+[   14.755323] NET: Registered protocol family 10
+[   14.756246] NET: Registered protocol family 17
+[   14.756312] Key type dns_resolver registered
+[   14.758054] Loading compiled-in X.509 certificates
+[   14.759823] Loaded X.509 cert 'Build time autogenerated kernel key: 6a1c9c21f04ab86fd1d7ced6ca113540fc8e35b6'
+[   14.759939] registered taskstats version 1
+[   14.760019] zswap: loading zswap
+[   14.760054] zswap: using zbud pool
+[   14.760096] zswap: using lzo compressor
+[   14.771836] Key type trusted registered
+[   14.804977] Key type encrypted registered
+[   14.805205] AppArmor: AppArmor sha1 policy hashing enabled
+[   14.811296] ima: No TPM chip found, activating TPM-bypass!
+[   14.816088] evm: HMAC attrs: 0x1
+[   14.822638]   Magic number: 0:802:492
+[   14.828068] rtc_cmos 00:00: setting system clock to 2016-01-28 17:29:04 UTC (1454002144)
+[   14.833760] BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
+[   14.838563] EDD information not available.
+[   14.843592] PM: Hibernation image not present or could not be loaded.
+[   14.845299] Freeing unused kernel memory: 1460K (ffffffff81d37000 - ffffffff81ea4000)
+[   14.850135] Write protecting the kernel read-only data: 12288k
+[   14.856899] Freeing unused kernel memory: 36K (ffff8800027f7000 - ffff880002800000)
+[   14.862657] Freeing unused kernel memory: 296K (ffff880002bb6000 - ffff880002c00000)
+[   14.974250] random: udevadm urandom read with 2 bits of entropy available
+[   15.060411] sdhci: Secure Digital Host Controller Interface driver
+[   15.067279] sdhci: Copyright(c) Pierre Ossman
+[   15.077587] sdhci-acpi 80860F14:00: No vmmc regulator found
+[   15.084334] sdhci-acpi 80860F14:00: No vqmmc regulator found
+[   15.091798] wmi: Mapper loaded
+[   15.094339] mmc0: SDHCI controller on ACPI [80860F14:00] using ADMA
+[   15.095588] sdhci-acpi INT33BB:00: No vmmc regulator found
+[   15.095591] sdhci-acpi INT33BB:00: No vqmmc regulator found
+[   15.099194] mmc1: SDHCI controller on ACPI [INT33BB:00] using ADMA
+[   15.100616] sdhci-acpi 80860F14:02: No vmmc regulator found
+[   15.100619] sdhci-acpi 80860F14:02: No vqmmc regulator found
+[   15.104435] mmc2: SDHCI controller on ACPI [80860F14:02] using ADMA
+[   15.147011] hidraw: raw HID events driver (C) Jiri Kosina
+[   15.173950] usb-storage 1-1.4:1.0: USB Mass Storage device detected
+[   15.181257] scsi host0: usb-storage 1-1.4:1.0
+[   15.183932] [drm] Initialized drm 1.1.0 20060810
+[   15.194468] usbcore: registered new interface driver usb-storage
+[   15.204652] usbcore: registered new interface driver uas
+[   15.218513] usbcore: registered new interface driver usbhid
+[   15.223624] usbhid: USB HID core driver
+[   15.232895] input: daskeyboard as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1.2/1-1.2:1.0/0003:04D9:2013.0001/input/input0
+[   15.255104] [drm] Memory usable by graphics device = 2048M
+[   15.259851] checking generic (80000000 8d0000) vs hw (80000000 10000000)
+[   15.259859] fb: switching to inteldrmfb from EFI VGA
+[   15.264636] Console: switching to colour dummy device 80x25
+[   15.265080] [drm] Replacing VGA console driver
+[   15.267385] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[   15.267400] [drm] Driver supports precise vblank timestamp query.
+[   15.277060] vgaarb: device changed decodes: PCI:0000:00:02.0,olddecodes=io+mem,decodes=io+mem:owns=io+mem
+[   15.293421] hid-generic 0003:04D9:2013.0001: input,hidraw0: USB HID v1.10 Keyboard [daskeyboard] on usb-0000:00:14.0-1.2/input0
+[   15.294391] input: daskeyboard as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1.2/1-1.2:1.1/0003:04D9:2013.0002/input/input1
+[   15.312551] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+[   15.313451] acpi device:21: registered as cooling_device4
+[   15.313577] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/LNXVIDEO:00/input/input2
+[   15.350306] hid-generic 0003:04D9:2013.0002: input,hidraw1: USB HID v1.10 Device [daskeyboard] on usb-0000:00:14.0-1.2/input1
+[   15.350834] [drm] Initialized i915 1.6.0 20150522 for 0000:00:02.0 on minor 0
+[   15.351286] input: Logitech USB Laser Mouse as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1.3/1-1.3:1.0/0003:046D:C069.0003/input/input3
+[   15.353281] hid-generic 0003:046D:C069.0003: input,hidraw2: USB HID v1.10 Mouse [Logitech USB Laser Mouse] on usb-0000:00:14.0-1.3/input0
+[   15.372623] [drm] GMBUS [i915 gmbus dpb] timed out, falling back to bit banging on pin 5
+[   15.448578] [drm] GMBUS [i915 gmbus dpc] timed out, falling back to bit banging on pin 4
+[   15.451363] fbcon: inteldrmfb (fb0) is primary device
+[   15.664328] mmc0: MAN_BKOPS_EN bit is not set
+[   15.681556] mmc0: new HS200 MMC card at address 0001
+[   15.687739] mmcblk0: mmc0:0001 NCard  29.1 GiB 
+[   15.688154] mmcblk0boot0: mmc0:0001 NCard  partition 1 4.00 MiB
+[   15.688341] mmcblk0boot1: mmc0:0001 NCard  partition 2 4.00 MiB
+[   15.688728] mmcblk0rpmb: mmc0:0001 NCard  partition 3 4.00 MiB
+[   15.691996]  mmcblk0: p1 p2 p3 p4 p5 p6 p7
+[   15.753109] mmc1: queuing unknown CIS tuple 0x80 (2 bytes)
+[   15.754600] mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+[   15.756107] mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+[   15.758792] mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+[   15.761481] mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+[   15.852122] mmc1: new high speed SDIO card at address 0001
+[   15.933788] mmc1: queuing unknown CIS tuple 0x80 (2 bytes)
+[   15.935612] mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+[   15.937200] mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+[   15.939860] mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+[   15.942505] mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+[   16.383215] scsi 0:0:0:0: Direct-Access     USB 2.0  USB Flash Drive  1100 PQ: 0 ANSI: 4
+[   16.384283] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[   16.384424] sd 0:0:0:0: [sda] 31405824 512-byte logical blocks: (16.0 GB/14.9 GiB)
+[   16.384913] sd 0:0:0:0: [sda] Write Protect is off
+[   16.384917] sd 0:0:0:0: [sda] Mode Sense: 43 00 00 00
+[   16.385437] sd 0:0:0:0: [sda] No Caching mode page found
+[   16.385440] sd 0:0:0:0: [sda] Assuming drive cache: write through
+[   16.395607]  sda: sda1 sda2
+[   16.398185] sd 0:0:0:0: [sda] Attached SCSI removable disk
+[   17.051960] Console: switching to colour frame buffer device 160x50
+[   17.071116] i915 0000:00:02.0: fb0: inteldrmfb frame buffer device
+[   17.073113] i915 0000:00:02.0: registered panic notifier
+[   18.460265] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[   18.602153] random: nonblocking pool is initialized
+[   33.087904] systemd[1]: Failed to insert module 'kdbus': Function not implemented
+[   33.112618] systemd[1]: systemd 225 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ -LZ4 +SECCOMP +BLKID -ELFUTILS +KMOD -IDN)
+[   33.117103] systemd[1]: Detected architecture x86-64.
+[   33.120953] systemd[1]: Set hostname to <ubuntu>.
+[   33.123370] systemd[1]: Initializing machine ID from random generator.
+[   33.285299] systemd[1]: [/lib/systemd/system/casper.service:10] Failed to parse input specifier, ignoring: force-tty
+[   33.289604] systemd[1]: rofs.mount: Unit is bound to inactive unit dev-loop0.device. Stopping, too.
+[   33.294596] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[   33.298814] systemd[1]: Created slice Root Slice.
+[   33.304602] systemd[1]: Listening on LVM2 poll daemon socket.
+[   33.311729] systemd[1]: Listening on Device-mapper event daemon FIFOs.
+[   33.317746] systemd[1]: Created slice System Slice.
+[   33.323722] systemd[1]: Listening on LVM2 metadata daemon socket.
+[   33.329354] systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.
+[   33.335791] systemd[1]: Listening on Journal Socket (/dev/log).
+[   33.343042] systemd[1]: Starting Increase datagram queue length...
+[   33.347156] systemd[1]: Reached target Remote File Systems (Pre).
+[   33.350034] systemd[1]: Reached target Encrypted Volumes.
+[   33.356021] systemd[1]: Reached target User and Group Name Lookups.
+[   33.359564] systemd[1]: Listening on Journal Socket.
+[   33.371256] systemd[1]: Starting Setup Virtual Console...
+[   33.378629] systemd[1]: Started Read required files in advance.
+[   33.387370] systemd[1]: Mounting Debug File System...
+[   33.394242] systemd[1]: Starting Remount Root and Kernel File Systems...
+[   33.402206] systemd[1]: Mounting Huge Pages File System...
+[   33.406401] systemd[1]: Listening on Journal Audit Socket.
+[   33.413368] systemd[1]: Listening on udev Kernel Socket.
+[   33.423614] systemd[1]: Starting Uncomplicated firewall...
+[   33.433019] systemd[1]: Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+[   33.440558] systemd[1]: Starting Create list of required static device nodes for the current kernel...
+[   33.449539] systemd[1]: Starting Load Kernel Modules...
+[   33.456188] systemd[1]: Created slice User and Session Slice.
+[   33.465331] systemd[1]: Started Braille Device Support.
+[   33.478794] systemd[1]: Mounting POSIX Message Queue File System...
+[   33.483694] systemd[1]: Listening on udev Control Socket.
+[   33.494170] systemd[1]: Starting udev Coldplug all Devices...
+[   33.500545] systemd[1]: Reached target Slices.
+[   33.504437] systemd[1]: Created slice system-getty.slice.
+[   33.510740] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[   33.517007] systemd[1]: Reached target Swap.
+[   33.529714] systemd[1]: Mounted Debug File System.
+[   33.534124] systemd[1]: Mounted POSIX Message Queue File System.
+[   33.540741] systemd[1]: Mounted Huge Pages File System.
+[   33.548054] systemd[1]: Started Increase datagram queue length.
+[   33.554843] systemd[1]: Started Setup Virtual Console.
+[   33.561804] systemd[1]: Started Remount Root and Kernel File Systems.
+[   33.568074] lp: driver loaded but no devices found
+[   33.568581] systemd[1]: Started Uncomplicated firewall.
+[   33.578352] systemd[1]: Started Create list of required static device nodes for the current kernel.
+[   33.582025] ppdev: user-space parallel port driver
+[   33.609404] systemd[1]: Started Load Kernel Modules.
+[   33.649577] systemd[1]: Starting Apply Kernel Variables...
+[   33.658499] systemd[1]: Mounting FUSE Control File System...
+[   33.665425] systemd[1]: Started LVM2 metadata daemon.
+[   33.672755] systemd[1]: Starting Create Static Device Nodes in /dev...
+[   33.683638] systemd[1]: Starting Load/Save Random Seed...
+[   33.686693] systemd[1]: Starting Ensure /etc/mtab is a symlink to /proc/mounts...
+[   33.691053] systemd[1]: Listening on Syslog Socket.
+[   33.699234] systemd[1]: Starting Journal Service...
+[   33.705141] systemd[1]: Mounted FUSE Control File System.
+[   33.706350] systemd[1]: Started Apply Kernel Variables.
+[   33.710078] systemd[1]: Started Create Static Device Nodes in /dev.
+[   33.713130] systemd[1]: Started Load/Save Random Seed.
+[   33.715859] systemd[1]: Started Ensure /etc/mtab is a symlink to /proc/mounts.
+[   33.729921] systemd[1]: Started udev Coldplug all Devices.
+[   33.747040] systemd[1]: Starting udev Kernel Device Manager...
+[   33.826789] systemd[1]: Started Journal Service.
+[   33.857220] systemd-journald[1030]: Received request to flush runtime journal from PID 1
+[   34.004797] 80860F0A:00: ttyS4 at MMIO 0x90b1b000 (irq = 191, base_baud = 2764800) is a 16550A
+[   34.005242] 80860F0A:01: ttyS5 at MMIO 0x90b1d000 (irq = 192, base_baud = 2764800) is a 16550A
+[   34.054672] axp20x i2c-INT33F4:00: AXP20x variant AXP288 found
+[   34.199243] axp20x i2c-INT33F4:00: AXP20X driver loaded
+[   34.201518] ACPI Error: No handler for Region [BMOP] (ffff88007b4b5cf0) [UserDefinedRegion] (20150619/evregion-163)
+[   34.201529] ACPI Error: Region UserDefinedRegion (ID=158) has no handler (20150619/exfldio-297)
+[   34.201538] ACPI Error: Method parse/execution failed [\_SB_.I2C5.BMBT._BST] (Node ffff88007b4bd1b8), AE_NOT_EXIST (20150619/psparse-536)
+[   34.201554] ACPI Exception: AE_NOT_EXIST, Evaluating _BST (20150619/battery-510)
+[   34.223805] ACPI Error: No handler for Region [BMOP] (ffff88007b4b5cf0) [UserDefinedRegion] (20150619/evregion-163)
+[   34.223810] ACPI Error: Region UserDefinedRegion (ID=158) has no handler (20150619/exfldio-297)
+[   34.223821] ACPI Error: Method parse/execution failed [\_SB_.I2C5.BMBT._BST] (Node ffff88007b4bd1b8), AE_NOT_EXIST (20150619/psparse-536)
+[   34.223829] ACPI Exception: AE_NOT_EXIST, Evaluating _BST (20150619/battery-510)
+[   34.248616] ACPI Error: No handler for Region [BMOP] (ffff88007b4b5cf0) [UserDefinedRegion] (20150619/evregion-163)
+[   34.248621] ACPI Error: Region UserDefinedRegion (ID=158) has no handler (20150619/exfldio-297)
+[   34.248631] ACPI Error: Method parse/execution failed [\_SB_.I2C5.BMBT._BST] (Node ffff88007b4bd1b8), AE_NOT_EXIST (20150619/psparse-536)
+[   34.248639] ACPI Exception: AE_NOT_EXIST, Evaluating _BST (20150619/battery-510)
+[   34.270595] ACPI Error: No handler for Region [BMOP] (ffff88007b4b5cf0) [UserDefinedRegion] (20150619/evregion-163)
+[   34.270608] ACPI Error: Region UserDefinedRegion (ID=158) has no handler (20150619/exfldio-297)
+[   34.270617] ACPI Error: Method parse/execution failed [\_SB_.I2C5.BMBT._BST] (Node ffff88007b4bd1b8), AE_NOT_EXIST (20150619/psparse-536)
+[   34.270632] ACPI Exception: AE_NOT_EXIST, Evaluating _BST (20150619/battery-510)
+[   34.294415] ACPI Error: No handler for Region [BMOP] (ffff88007b4b5cf0) [UserDefinedRegion] (20150619/evregion-163)
+[   34.294429] ACPI Error: Region UserDefinedRegion (ID=158) has no handler (20150619/exfldio-297)
+[   34.294438] ACPI Error: Method parse/execution failed [\_SB_.I2C5.BMBT._BST] (Node ffff88007b4bd1b8), AE_NOT_EXIST (20150619/psparse-536)
+[   34.294454] ACPI Exception: AE_NOT_EXIST, Evaluating _BST (20150619/battery-510)
+[   34.689881] cgroup: new mount options do not match the existing superblock, will be ignored
+[   66.613038] ------------[ cut here ]------------
+[   66.613122] WARNING: CPU: 0 PID: 1341 at /build/linux-AxjFAn/linux-4.2.0/drivers/gpu/drm/drm_irq.c:1171 drm_wait_one_vblank+0x1b8/0x1c0 [drm]()
+[   66.613134] vblank wait timed out on crtc 0
+[   66.613142] Modules linked in: snd_soc_core(+) snd_compress ac97_bus snd_pcm_dmaengine snd_pcm snd_seq_midi snd_seq_midi_event snd_rawmidi snd_seq snd_seq_device snd_timer snd soundcore int3402_thermal processor_thermal_device(+) int3400_thermal(+) intel_soc_dts_iosf acpi_thermal_rel int3403_thermal(+) int340x_thermal_zone iosf_mbi acpi_pad i2c_designware_platform(+) i2c_designware_core snd_soc_sst_acpi pwm_lpss_platform spi_pxa2xx_platform pwm_lpss 8250_dw parport_pc ppdev lp parport autofs4 squashfs overlay nls_iso8859_1 dm_mirror dm_region_hash dm_log mmc_block i915 hid_generic i2c_algo_bit uas drm_kms_helper usbhid hid usb_storage drm wmi video sdhci_acpi sdhci
+[   66.613350] CPU: 0 PID: 1341 Comm: Xorg Not tainted 4.2.0-16-generic #19-Ubuntu
+[   66.613360] Hardware name: ilife S806/BYT-PA03C, BIOS H1D_S806_206 10/29/2014
+[   66.613371]  0000000000000000 000000000f334741 ffff880078ebfa28 ffffffff817e8c09
+[   66.613393]  0000000000000000 ffff880078ebfa80 ffff880078ebfa68 ffffffff8107b3c6
+[   66.613412]  ffff88007acebc00 ffff88007a984000 0000000000000000 0000000000000000
+[   66.613431] Call Trace:
+[   66.613456]  [<ffffffff817e8c09>] dump_stack+0x45/0x57
+[   66.613478]  [<ffffffff8107b3c6>] warn_slowpath_common+0x86/0xc0
+[   66.613496]  [<ffffffff8107b455>] warn_slowpath_fmt+0x55/0x70
+[   66.613519]  [<ffffffff810bcc19>] ? finish_wait+0x59/0x70
+[   66.613577]  [<ffffffffc0062298>] drm_wait_one_vblank+0x1b8/0x1c0 [drm]
+[   66.613597]  [<ffffffff810bd0d0>] ? wake_atomic_t_function+0x60/0x60
+[   66.613717]  [<ffffffffc01c7b5a>] i9xx_crtc_disable+0x4a/0x400 [i915]
+[   66.613832]  [<ffffffffc01cdfec>] __intel_set_mode+0x94c/0xb60 [i915]
+[   66.613911]  [<ffffffffc007c3d0>] ? drm_atomic_set_fb_for_plane+0x20/0x90 [drm]
+[   66.614026]  [<ffffffffc01d4d16>] intel_crtc_set_config+0x2b6/0x580 [i915]
+[   66.614103]  [<ffffffffc007abe0>] ? drm_modeset_lock_all_crtcs+0x90/0xa0 [drm]
+[   66.614171]  [<ffffffffc006b4c6>] drm_mode_set_config_internal+0x66/0x100 [drm]
+[   66.614241]  [<ffffffffc006fb29>] drm_mode_setcrtc+0x3e9/0x500 [drm]
+[   66.614298]  [<ffffffffc0060495>] drm_ioctl+0x125/0x610 [drm]
+[   66.614368]  [<ffffffffc006f740>] ? drm_mode_setplane+0x1b0/0x1b0 [drm]
+[   66.614386]  [<ffffffff810ae699>] ? update_curr+0x119/0x150
+[   66.614407]  [<ffffffff812108a5>] do_vfs_ioctl+0x295/0x480
+[   66.614425]  [<ffffffff81210b09>] SyS_ioctl+0x79/0x90
+[   66.614442]  [<ffffffff81212cb1>] ? SyS_poll+0x71/0x130
+[   66.614462]  [<ffffffff817ef9f2>] entry_SYSCALL_64_fastpath+0x16/0x75
+[   66.614476] ---[ end trace 127f585f0f6a0105 ]---
+[   66.721151] [drm:dpi_send_cmd.constprop.8 [i915]] *ERROR* Video mode command 0x00000041 send failed.
+[   66.844980] ------------[ cut here ]------------
+[   66.845122] WARNING: CPU: 0 PID: 1341 at /build/linux-AxjFAn/linux-4.2.0/drivers/gpu/drm/i915/intel_display.c:1064 intel_disable_pipe+0x28d/0x2a0 [i915]()
+[   66.845133] pipe_off wait timed out
+[   66.845142] Modules linked in: snd_soc_core(+) snd_compress ac97_bus snd_pcm_dmaengine snd_pcm snd_seq_midi snd_seq_midi_event snd_rawmidi snd_seq snd_seq_device snd_timer snd soundcore int3402_thermal processor_thermal_device(+) int3400_thermal(+) intel_soc_dts_iosf acpi_thermal_rel int3403_thermal(+) int340x_thermal_zone iosf_mbi acpi_pad i2c_designware_platform(+) i2c_designware_core snd_soc_sst_acpi pwm_lpss_platform spi_pxa2xx_platform pwm_lpss 8250_dw parport_pc ppdev lp parport autofs4 squashfs overlay nls_iso8859_1 dm_mirror dm_region_hash dm_log mmc_block i915 hid_generic i2c_algo_bit uas drm_kms_helper usbhid hid usb_storage drm wmi video sdhci_acpi sdhci
+[   66.845350] CPU: 0 PID: 1341 Comm: Xorg Tainted: G        W       4.2.0-16-generic #19-Ubuntu
+[   66.845360] Hardware name: ilife S806/BYT-PA03C, BIOS H1D_S806_206 10/29/2014
+[   66.845372]  0000000000000000 000000000f334741 ffff880078ebfa58 ffffffff817e8c09
+[   66.845394]  0000000000000000 ffff880078ebfab0 ffff880078ebfa98 ffffffff8107b3c6
+[   66.845413]  000000000000053d ffff880000020000 00000000001f0008 00000000ffff1e4a
+[   66.845432] Call Trace:
+[   66.845458]  [<ffffffff817e8c09>] dump_stack+0x45/0x57
+[   66.845480]  [<ffffffff8107b3c6>] warn_slowpath_common+0x86/0xc0
+[   66.845498]  [<ffffffff8107b455>] warn_slowpath_fmt+0x55/0x70
+[   66.845613]  [<ffffffffc01c483d>] intel_disable_pipe+0x28d/0x2a0 [i915]
+[   66.845726]  [<ffffffffc01c7b9a>] i9xx_crtc_disable+0x8a/0x400 [i915]
+[   66.845841]  [<ffffffffc01cdfec>] __intel_set_mode+0x94c/0xb60 [i915]
+[   66.845924]  [<ffffffffc007c3d0>] ? drm_atomic_set_fb_for_plane+0x20/0x90 [drm]
+[   66.846040]  [<ffffffffc01d4d16>] intel_crtc_set_config+0x2b6/0x580 [i915]
+[   66.846117]  [<ffffffffc007abe0>] ? drm_modeset_lock_all_crtcs+0x90/0xa0 [drm]
+[   66.846184]  [<ffffffffc006b4c6>] drm_mode_set_config_internal+0x66/0x100 [drm]
+[   66.846255]  [<ffffffffc006fb29>] drm_mode_setcrtc+0x3e9/0x500 [drm]
+[   66.846314]  [<ffffffffc0060495>] drm_ioctl+0x125/0x610 [drm]
+[   66.846340]  [<ffffffffc006f740>] ? drm_mode_setplane+0x1b0/0x1b0 [drm]
+[   66.846347]  [<ffffffff810ae699>] ? update_curr+0x119/0x150
+[   66.846356]  [<ffffffff812108a5>] do_vfs_ioctl+0x295/0x480
+[   66.846362]  [<ffffffff81210b09>] SyS_ioctl+0x79/0x90
+[   66.846369]  [<ffffffff81212cb1>] ? SyS_poll+0x71/0x130
+[   66.846377]  [<ffffffff817ef9f2>] entry_SYSCALL_64_fastpath+0x16/0x75
+[   66.846382] ---[ end trace 127f585f0f6a0106 ]---
+[  237.969289] INFO: task kworker/u8:0:6 blocked for more than 120 seconds.
+[  237.969299]       Tainted: G        W       4.2.0-16-generic #19-Ubuntu
+[  237.969302] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[  237.969306] kworker/u8:0    D ffff88007b896640     0     6      2 0x00000000
+[  237.969323] Workqueue: events_power_efficient power_supply_deferred_register_work
+[  237.969328]  ffff88007a91bd28 0000000000000046 ffff880035df2580 ffff88007a8ebe80
+[  237.969334]  ffff88007acf0010 ffff88007a91c000 ffff88007c0af2bc ffff88007a8ebe80
+[  237.969340]  00000000ffffffff ffff88007c0af2c0 ffff88007a91bd48 ffffffff817eb9a7
+[  237.969347] Call Trace:
+[  237.969357]  [<ffffffff817eb9a7>] schedule+0x37/0x80
+[  237.969363]  [<ffffffff817ebc5e>] schedule_preempt_disabled+0xe/0x10
+[  237.969369]  [<ffffffff817ed835>] __mutex_lock_slowpath+0xb5/0x120
+[  237.969375]  [<ffffffff817ed8c3>] mutex_lock+0x23/0x40
+[  237.969380]  [<ffffffff8164acbb>] power_supply_deferred_register_work+0x2b/0x50
+[  237.969388]  [<ffffffff8109412a>] process_one_work+0x1aa/0x440
+[  237.969394]  [<ffffffff8109440b>] worker_thread+0x4b/0x4c0
+[  237.969400]  [<ffffffff810943c0>] ? process_one_work+0x440/0x440
+[  237.969406]  [<ffffffff8109a7c8>] kthread+0xd8/0xf0
+[  237.969411]  [<ffffffff8109a6f0>] ? kthread_create_on_node+0x1f0/0x1f0
+[  237.969417]  [<ffffffff817efe1f>] ret_from_fork+0x3f/0x70
+[  237.969422]  [<ffffffff8109a6f0>] ? kthread_create_on_node+0x1f0/0x1f0
+[  237.969464] INFO: task systemd-udevd:1048 blocked for more than 120 seconds.
+[  237.969468]       Tainted: G        W       4.2.0-16-generic #19-Ubuntu
+[  237.969471] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[  237.969474] systemd-udevd   D ffff88007b996640     0  1048   1033 0x00000004
+[  237.969480]  ffff88007996fab8 0000000000000086 ffff88007a933200 ffff880067480c80
+[  237.969487]  ffff88007996fac8 ffff880079970000 ffffffff81cc1da4 ffff880067480c80
+[  237.969493]  00000000ffffffff ffffffff81cc1da8 ffff88007996fad8 ffffffff817eb9a7
+[  237.969499] Call Trace:
+[  237.969505]  [<ffffffff817eb9a7>] schedule+0x37/0x80
+[  237.969513]  [<ffffffff817ebc5e>] schedule_preempt_disabled+0xe/0x10
+[  237.969519]  [<ffffffff817ed835>] __mutex_lock_slowpath+0xb5/0x120
+[  237.969526]  [<ffffffff81520d80>] ? driver_probe_device+0x490/0x490
+[  237.969531]  [<ffffffff817ed8c3>] mutex_lock+0x23/0x40
+[  237.969536]  [<ffffffff81520dc9>] __driver_attach+0x49/0xa0
+[  237.969542]  [<ffffffff81520d80>] ? driver_probe_device+0x490/0x490
+[  237.969548]  [<ffffffff8151e6ac>] bus_for_each_dev+0x6c/0xc0
+[  237.969554]  [<ffffffff815202ae>] driver_attach+0x1e/0x20
+[  237.969560]  [<ffffffff8151fddb>] bus_add_driver+0x1eb/0x280
+[  237.969566]  [<ffffffffc032d000>] ? 0xffffffffc032d000
+[  237.969570]  [<ffffffff815216b0>] driver_register+0x60/0xe0
+[  237.969576]  [<ffffffff81522c0a>] __platform_driver_register+0x4a/0x50
+[  237.969585]  [<ffffffffc032d017>] proc_thermal_init+0x17/0x1000 [processor_thermal_device]
+[  237.969591]  [<ffffffff81002123>] do_one_initcall+0xb3/0x200
+[  237.969598]  [<ffffffff811de027>] ? kmem_cache_alloc_trace+0x187/0x1f0
+[  237.969603]  [<ffffffff817e66c8>] ? do_init_module+0x28/0x1e7
+[  237.969609]  [<ffffffff817e6700>] do_init_module+0x60/0x1e7
+[  237.969615]  [<ffffffff81102876>] load_module+0x1676/0x1c10
+[  237.969621]  [<ffffffff810fe9c0>] ? __symbol_put+0x60/0x60
+[  237.969628]  [<ffffffff81202f80>] ? kernel_read+0x50/0x80
+[  237.969635]  [<ffffffff81103069>] SyS_finit_module+0xb9/0xf0
+[  237.969641]  [<ffffffff817ef9f2>] entry_SYSCALL_64_fastpath+0x16/0x75
+[  237.969647] INFO: task systemd-udevd:1052 blocked for more than 120 seconds.
+[  237.969651]       Tainted: G        W       4.2.0-16-generic #19-Ubuntu
+[  237.969654] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[  237.969657] systemd-udevd   D ffff88007b896640     0  1052   1033 0x00000004
+[  237.969663]  ffff880079a0b598 0000000000000082 ffff88007951e400 ffff880067485780
+[  237.969669]  0000000000000246 ffff880079a0c000 ffff880079a0b710 ffff880079a0b708
+[  237.969675]  ffff880067485780 ffff880067485780 ffff880079a0b5b8 ffffffff817eb9a7
+[  237.969681] Call Trace:
+[  237.969687]  [<ffffffff817eb9a7>] schedule+0x37/0x80
+[  237.969693]  [<ffffffff817eea49>] schedule_timeout+0x189/0x250
+[  237.969699]  [<ffffffff8101e229>] ? sched_clock+0x9/0x10
+[  237.969706]  [<ffffffff810a5996>] ? try_to_wake_up+0x1f6/0x300
+[  237.969712]  [<ffffffff817ec3c3>] wait_for_completion+0xb3/0x140
+[  237.969717]  [<ffffffff810a5b60>] ? wake_up_q+0x70/0x70
+[  237.969723]  [<ffffffff8109502d>] flush_work+0x10d/0x1c0
+[  237.969728]  [<ffffffff81091200>] ? destroy_worker+0x90/0x90
+[  237.969734]  [<ffffffff81095215>] __cancel_work_timer+0xa5/0x1d0
+[  237.969742]  [<ffffffff812764d7>] ? kernfs_name_hash+0x17/0xa0
+[  237.969748]  [<ffffffff81095373>] cancel_delayed_work_sync+0x13/0x20
+[  237.969753]  [<ffffffff8164aeff>] power_supply_unregister+0x3f/0xc0
+[  237.969760]  [<ffffffff8148c33e>] sysfs_remove_battery+0x3d/0x52
+[  237.969766]  [<ffffffff8148d2bf>] acpi_battery_add+0x10f/0x180
+[  237.969772]  [<ffffffff8145a654>] acpi_device_probe+0x50/0xf7
+[  237.969777]  [<ffffffff81520b0a>] driver_probe_device+0x21a/0x490
+[  237.969782]  [<ffffffff81520e99>] __device_attach_driver+0x79/0xa0
+[  237.969787]  [<ffffffff81520e20>] ? __driver_attach+0xa0/0xa0
+[  237.969793]  [<ffffffff8151e787>] bus_for_each_drv+0x67/0xb0
+[  237.969798]  [<ffffffff815207ec>] __device_attach+0xdc/0x170
+[  237.969803]  [<ffffffff81520890>] device_attach+0x10/0x20
+[  237.969809]  [<ffffffff8145cbc7>] acpi_bus_attach+0x115/0x196
+[  237.969814]  [<ffffffff8145ccb4>] acpi_walk_dep_device_list+0x6c/0xb0
+[  237.969820]  [<ffffffff81648daf>] i2c_register_adapter+0x29f/0x4a0
+[  237.969825]  [<ffffffff8164900c>] i2c_add_adapter+0x5c/0x70
+[  237.969830]  [<ffffffff81649098>] i2c_add_numbered_adapter+0x78/0x80
+[  237.969838]  [<ffffffffc02b343f>] dw_i2c_probe+0x1ef/0x3d0 [i2c_designware_platform]
+[  237.969844]  [<ffffffff81279fe8>] ? sysfs_do_create_link_sd.isra.2+0x78/0xc0
+[  237.969849]  [<ffffffff81458869>] ? acpi_dev_pm_attach+0x21/0xa5
+[  237.969855]  [<ffffffff81522cc4>] platform_drv_probe+0x34/0x90
+[  237.969860]  [<ffffffff81520b0a>] driver_probe_device+0x21a/0x490
+[  237.969865]  [<ffffffff81520e10>] __driver_attach+0x90/0xa0
+[  237.969870]  [<ffffffff81520d80>] ? driver_probe_device+0x490/0x490
+[  237.969876]  [<ffffffff8151e6ac>] bus_for_each_dev+0x6c/0xc0
+[  237.969882]  [<ffffffff815202ae>] driver_attach+0x1e/0x20
+[  237.969888]  [<ffffffff8151fddb>] bus_add_driver+0x1eb/0x280
+[  237.969893]  [<ffffffffc02b8000>] ? 0xffffffffc02b8000
+[  237.969898]  [<ffffffff815216b0>] driver_register+0x60/0xe0
+[  237.969903]  [<ffffffff81522c0a>] __platform_driver_register+0x4a/0x50
+[  237.969910]  [<ffffffffc02b8017>] dw_i2c_init_driver+0x17/0x1000 [i2c_designware_platform]
+[  237.969915]  [<ffffffff81002123>] do_one_initcall+0xb3/0x200
+[  237.969921]  [<ffffffff811de027>] ? kmem_cache_alloc_trace+0x187/0x1f0
+[  237.969926]  [<ffffffff817e66c8>] ? do_init_module+0x28/0x1e7
+[  237.969931]  [<ffffffff817e6700>] do_init_module+0x60/0x1e7
+[  237.969937]  [<ffffffff81102876>] load_module+0x1676/0x1c10
+[  237.969942]  [<ffffffff810fe9c0>] ? __symbol_put+0x60/0x60
+[  237.969949]  [<ffffffff81202f80>] ? kernel_read+0x50/0x80
+[  237.969955]  [<ffffffff81103069>] SyS_finit_module+0xb9/0xf0
+[  237.969962]  [<ffffffff817ef9f2>] entry_SYSCALL_64_fastpath+0x16/0x75
+[  237.969967] INFO: task systemd-udevd:1053 blocked for more than 120 seconds.
+[  237.969972]       Tainted: G        W       4.2.0-16-generic #19-Ubuntu
+[  237.969974] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[  237.969977] systemd-udevd   D ffff88007b896640     0  1053   1033 0x00000004
+[  237.969984]  ffff880079a2fa48 0000000000000086 ffff88007a931900 ffff880067482580
+[  237.969990]  ffff880079a2fa58 ffff880079a30000 ffffffff81cc1da4 ffff880067482580
+[  237.969996]  00000000ffffffff ffffffff81cc1da8 ffff880079a2fa68 ffffffff817eb9a7
+[  237.970002] Call Trace:
+[  237.970008]  [<ffffffff817eb9a7>] schedule+0x37/0x80
+[  237.970014]  [<ffffffff817ebc5e>] schedule_preempt_disabled+0xe/0x10
+[  237.970020]  [<ffffffff817ed835>] __mutex_lock_slowpath+0xb5/0x120
+[  237.970025]  [<ffffffff81520d80>] ? driver_probe_device+0x490/0x490
+[  237.970031]  [<ffffffff817ed8c3>] mutex_lock+0x23/0x40
+[  237.970036]  [<ffffffff81520dc9>] __driver_attach+0x49/0xa0
+[  237.970041]  [<ffffffff81520d80>] ? driver_probe_device+0x490/0x490
+[  237.970047]  [<ffffffff8151e6ac>] bus_for_each_dev+0x6c/0xc0
+[  237.970053]  [<ffffffff815202ae>] driver_attach+0x1e/0x20
+[  237.970059]  [<ffffffff8151fddb>] bus_add_driver+0x1eb/0x280
+[  237.970078]  [<ffffffffc03f946d>] ? trace_event_define_fields_snd_soc_dapm_input_path+0xf5/0xf5 [snd_soc_core]
+[  237.970083]  [<ffffffff815216b0>] driver_register+0x60/0xe0
+[  237.970088]  [<ffffffff81522c0a>] __platform_driver_register+0x4a/0x50
+[  237.970105]  [<ffffffffc03f95b8>] snd_soc_util_init+0x5d/0xaa5 [snd_soc_core]
+[  237.970123]  [<ffffffffc03f9546>] snd_soc_init+0xd9/0xee [snd_soc_core]
+[  237.970128]  [<ffffffff81002123>] do_one_initcall+0xb3/0x200
+[  237.970134]  [<ffffffff811c2835>] ? __vunmap+0x95/0xf0
+[  237.970139]  [<ffffffff811de027>] ? kmem_cache_alloc_trace+0x187/0x1f0
+[  237.970144]  [<ffffffff817e66c8>] ? do_init_module+0x28/0x1e7
+[  237.970150]  [<ffffffff817e6700>] do_init_module+0x60/0x1e7
+[  237.970156]  [<ffffffff81102876>] load_module+0x1676/0x1c10
+[  237.970161]  [<ffffffff810fe9c0>] ? __symbol_put+0x60/0x60
+[  237.970168]  [<ffffffff81202f80>] ? kernel_read+0x50/0x80
+[  237.970175]  [<ffffffff81103069>] SyS_finit_module+0xb9/0xf0
+[  237.970181]  [<ffffffff817ef9f2>] entry_SYSCALL_64_fastpath+0x16/0x75
+[  237.970187] INFO: task systemd-udevd:1054 blocked for more than 120 seconds.
+[  237.970191]       Tainted: G        W       4.2.0-16-generic #19-Ubuntu
+[  237.970194] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[  237.970197] systemd-udevd   D ffff88007b896640     0  1054   1033 0x00000004
+[  237.970203]  ffff880079a53ab8 0000000000000086 ffff88007aea8000 ffff88007aeae400
+[  237.970210]  ffff880079a53ac8 ffff880079a54000 ffffffff81cc1da4 ffff88007aeae400
+[  237.970216]  00000000ffffffff ffffffff81cc1da8 ffff880079a53ad8 ffffffff817eb9a7
+[  237.970222] Call Trace:
+[  237.970228]  [<ffffffff817eb9a7>] schedule+0x37/0x80
+[  237.970233]  [<ffffffff817ebc5e>] schedule_preempt_disabled+0xe/0x10
+[  237.970239]  [<ffffffff817ed835>] __mutex_lock_slowpath+0xb5/0x120
+[  237.970245]  [<ffffffff81520d80>] ? driver_probe_device+0x490/0x490
+[  237.970250]  [<ffffffff817ed8c3>] mutex_lock+0x23/0x40
+[  237.970255]  [<ffffffff81520dc9>] __driver_attach+0x49/0xa0
+[  237.970260]  [<ffffffff81520d80>] ? driver_probe_device+0x490/0x490
+[  237.970266]  [<ffffffff8151e6ac>] bus_for_each_dev+0x6c/0xc0
+[  237.970272]  [<ffffffff815202ae>] driver_attach+0x1e/0x20
+[  237.970278]  [<ffffffff8151fddb>] bus_add_driver+0x1eb/0x280
+[  237.970283]  [<ffffffffc0315000>] ? 0xffffffffc0315000
+[  237.970288]  [<ffffffff815216b0>] driver_register+0x60/0xe0
+[  237.970293]  [<ffffffff81522c0a>] __platform_driver_register+0x4a/0x50
+[  237.970300]  [<ffffffffc0315017>] int3400_thermal_driver_init+0x17/0x1000 [int3400_thermal]
+[  237.970305]  [<ffffffff81002123>] do_one_initcall+0xb3/0x200
+[  237.970311]  [<ffffffff811de027>] ? kmem_cache_alloc_trace+0x187/0x1f0
+[  237.970316]  [<ffffffff817e66c8>] ? do_init_module+0x28/0x1e7
+[  237.970321]  [<ffffffff817e6700>] do_init_module+0x60/0x1e7
+[  237.970327]  [<ffffffff81102876>] load_module+0x1676/0x1c10
+[  237.970332]  [<ffffffff810fe9c0>] ? __symbol_put+0x60/0x60
+[  237.970339]  [<ffffffff81202f80>] ? kernel_read+0x50/0x80
+[  237.970345]  [<ffffffff81103069>] SyS_finit_module+0xb9/0xf0
+[  237.970352]  [<ffffffff817ef9f2>] entry_SYSCALL_64_fastpath+0x16/0x75
+[  237.970357] INFO: task systemd-udevd:1057 blocked for more than 120 seconds.
+[  237.970361]       Tainted: G        W       4.2.0-16-generic #19-Ubuntu
+[  237.970364] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[  237.970367] systemd-udevd   D ffff88007b916640     0  1057   1033 0x00000004
+[  237.970374]  ffff880079977ab8 0000000000000086 ffff88007abde400 ffff8800360b0c80
+[  237.970380]  ffff880079977ac8 ffff880079978000 ffffffff81cc1da4 ffff8800360b0c80
+[  237.970386]  00000000ffffffff ffffffff81cc1da8 ffff880079977ad8 ffffffff817eb9a7
+[  237.970392] Call Trace:
+[  237.970398]  [<ffffffff817eb9a7>] schedule+0x37/0x80
+[  237.970404]  [<ffffffff817ebc5e>] schedule_preempt_disabled+0xe/0x10
+[  237.970410]  [<ffffffff817ed835>] __mutex_lock_slowpath+0xb5/0x120
+[  237.970415]  [<ffffffff81520d80>] ? driver_probe_device+0x490/0x490
+[  237.970421]  [<ffffffff817ed8c3>] mutex_lock+0x23/0x40
+[  237.970426]  [<ffffffff81520dc9>] __driver_attach+0x49/0xa0
+[  237.970431]  [<ffffffff81520d80>] ? driver_probe_device+0x490/0x490
+[  237.970437]  [<ffffffff8151e6ac>] bus_for_each_dev+0x6c/0xc0
+[  237.970443]  [<ffffffff815202ae>] driver_attach+0x1e/0x20
+[  237.970449]  [<ffffffff8151fddb>] bus_add_driver+0x1eb/0x280
+[  237.970454]  [<ffffffffc029b000>] ? 0xffffffffc029b000
+[  237.970459]  [<ffffffff815216b0>] driver_register+0x60/0xe0
+[  237.970464]  [<ffffffff81522c0a>] __platform_driver_register+0x4a/0x50
+[  237.970472]  [<ffffffffc029b017>] int3403_driver_init+0x17/0x1000 [int3403_thermal]
+[  237.970477]  [<ffffffff81002123>] do_one_initcall+0xb3/0x200
+[  237.970482]  [<ffffffff811c2835>] ? __vunmap+0x95/0xf0
+[  237.970487]  [<ffffffff811de027>] ? kmem_cache_alloc_trace+0x187/0x1f0
+[  237.970492]  [<ffffffff817e66c8>] ? do_init_module+0x28/0x1e7
+[  237.970498]  [<ffffffff817e6700>] do_init_module+0x60/0x1e7
+[  237.970504]  [<ffffffff81102876>] load_module+0x1676/0x1c10
+[  237.970509]  [<ffffffff810fe9c0>] ? __symbol_put+0x60/0x60
+[  237.970516]  [<ffffffff81202f80>] ? kernel_read+0x50/0x80
+[  237.970522]  [<ffffffff81103069>] SyS_finit_module+0xb9/0xf0
+[  237.970529]  [<ffffffff817ef9f2>] entry_SYSCALL_64_fastpath+0x16/0x75
+[  357.933968] INFO: task kworker/u8:0:6 blocked for more than 120 seconds.
+[  357.933992]       Tainted: G        W       4.2.0-16-generic #19-Ubuntu
+[  357.934003] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[  357.934014] kworker/u8:0    D ffff88007b896640     0     6      2 0x00000000
+[  357.934052] Workqueue: events_power_efficient power_supply_deferred_register_work
+[  357.934066]  ffff88007a91bd28 0000000000000046 ffff880035df2580 ffff88007a8ebe80
+[  357.934086]  ffff88007acf0010 ffff88007a91c000 ffff88007c0af2bc ffff88007a8ebe80
+[  357.934106]  00000000ffffffff ffff88007c0af2c0 ffff88007a91bd48 ffffffff817eb9a7
+[  357.934125] Call Trace:
+[  357.934151]  [<ffffffff817eb9a7>] schedule+0x37/0x80
+[  357.934169]  [<ffffffff817ebc5e>] schedule_preempt_disabled+0xe/0x10
+[  357.934187]  [<ffffffff817ed835>] __mutex_lock_slowpath+0xb5/0x120
+[  357.934205]  [<ffffffff817ed8c3>] mutex_lock+0x23/0x40
+[  357.934222]  [<ffffffff8164acbb>] power_supply_deferred_register_work+0x2b/0x50
+[  357.934243]  [<ffffffff8109412a>] process_one_work+0x1aa/0x440
+[  357.934261]  [<ffffffff8109440b>] worker_thread+0x4b/0x4c0
+[  357.934280]  [<ffffffff810943c0>] ? process_one_work+0x440/0x440
+[  357.934297]  [<ffffffff8109a7c8>] kthread+0xd8/0xf0
+[  357.934316]  [<ffffffff8109a6f0>] ? kthread_create_on_node+0x1f0/0x1f0
+[  357.934331]  [<ffffffff817efe1f>] ret_from_fork+0x3f/0x70
+[  357.934349]  [<ffffffff8109a6f0>] ? kthread_create_on_node+0x1f0/0x1f0
+[  357.934396] INFO: task kworker/u8:2:141 blocked for more than 120 seconds.
+[  357.934409]       Tainted: G        W       4.2.0-16-generic #19-Ubuntu
+[  357.934418] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[  357.934428] kworker/u8:2    D 0000000000000000     0   141      2 0x00000000
+[  357.934457] Workqueue: deferwq deferred_probe_work_func
+[  357.934468]  ffff88007afb7c98 0000000000000046 ffff8800595d9900 ffff88007aed3200
+[  357.934488]  ffff88007afb7cc8 ffff88007afb8000 ffff88007c0af2bc ffff88007aed3200
+[  357.934507]  00000000ffffffff ffff88007c0af2c0 ffff88007afb7cb8 ffffffff817eb9a7
+[  357.934525] Call Trace:
+[  357.934544]  [<ffffffff817eb9a7>] schedule+0x37/0x80
+[  357.934562]  [<ffffffff817ebc5e>] schedule_preempt_disabled+0xe/0x10
+[  357.934579]  [<ffffffff817ed835>] __mutex_lock_slowpath+0xb5/0x120
+[  357.934597]  [<ffffffff817ed8c3>] mutex_lock+0x23/0x40
+[  357.934613]  [<ffffffff81520745>] __device_attach+0x35/0x170
+[  357.934633]  [<ffffffff81013689>] ? __switch_to+0x1f9/0x5c0
+[  357.934649]  [<ffffffff81520f03>] device_initial_probe+0x13/0x20
+[  357.934667]  [<ffffffff8151fa5a>] bus_probe_device+0x9a/0xb0
+[  357.934685]  [<ffffffff8151ff76>] deferred_probe_work_func+0x36/0xd0
+[  357.934703]  [<ffffffff8109412a>] process_one_work+0x1aa/0x440
+[  357.934721]  [<ffffffff8109440b>] worker_thread+0x4b/0x4c0
+[  357.934739]  [<ffffffff810943c0>] ? process_one_work+0x440/0x440
+[  357.934755]  [<ffffffff8109a7c8>] kthread+0xd8/0xf0
+[  357.934773]  [<ffffffff8109a6f0>] ? kthread_create_on_node+0x1f0/0x1f0
+[  357.934788]  [<ffffffff817efe1f>] ret_from_fork+0x3f/0x70
+[  357.934805]  [<ffffffff8109a6f0>] ? kthread_create_on_node+0x1f0/0x1f0
+[  357.934835] INFO: task systemd-udevd:1048 blocked for more than 120 seconds.
+[  357.934848]       Tainted: G        W       4.2.0-16-generic #19-Ubuntu
+[  357.934857] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[  357.934866] systemd-udevd   D ffff88007b996640     0  1048   1033 0x00000004
+[  357.934885]  ffff88007996fab8 0000000000000086 ffff88007a933200 ffff880067480c80
+[  357.934905]  ffff88007996fac8 ffff880079970000 ffffffff81cc1da4 ffff880067480c80
+[  357.934925]  00000000ffffffff ffffffff81cc1da8 ffff88007996fad8 ffffffff817eb9a7
+[  357.934943] Call Trace:
+[  357.934962]  [<ffffffff817eb9a7>] schedule+0x37/0x80
+[  357.934983]  [<ffffffff817ebc5e>] schedule_preempt_disabled+0xe/0x10
+[  357.935000]  [<ffffffff817ed835>] __mutex_lock_slowpath+0xb5/0x120
+[  357.935018]  [<ffffffff81520d80>] ? driver_probe_device+0x490/0x490
+[  357.935035]  [<ffffffff817ed8c3>] mutex_lock+0x23/0x40
+[  357.935051]  [<ffffffff81520dc9>] __driver_attach+0x49/0xa0
+[  357.935068]  [<ffffffff81520d80>] ? driver_probe_device+0x490/0x490
+[  357.935087]  [<ffffffff8151e6ac>] bus_for_each_dev+0x6c/0xc0
+[  357.935106]  [<ffffffff815202ae>] driver_attach+0x1e/0x20
+[  357.935124]  [<ffffffff8151fddb>] bus_add_driver+0x1eb/0x280
+[  357.935140]  [<ffffffffc032d000>] ? 0xffffffffc032d000
+[  357.935155]  [<ffffffff815216b0>] driver_register+0x60/0xe0
+[  357.935172]  [<ffffffff81522c0a>] __platform_driver_register+0x4a/0x50
+[  357.935198]  [<ffffffffc032d017>] proc_thermal_init+0x17/0x1000 [processor_thermal_device]
+[  357.935216]  [<ffffffff81002123>] do_one_initcall+0xb3/0x200
+[  357.935234]  [<ffffffff811de027>] ? kmem_cache_alloc_trace+0x187/0x1f0
+[  357.935250]  [<ffffffff817e66c8>] ? do_init_module+0x28/0x1e7
+[  357.935267]  [<ffffffff817e6700>] do_init_module+0x60/0x1e7
+[  357.935286]  [<ffffffff81102876>] load_module+0x1676/0x1c10
+[  357.935303]  [<ffffffff810fe9c0>] ? __symbol_put+0x60/0x60
+[  357.935325]  [<ffffffff81202f80>] ? kernel_read+0x50/0x80
+[  357.935345]  [<ffffffff81103069>] SyS_finit_module+0xb9/0xf0
+[  357.935366]  [<ffffffff817ef9f2>] entry_SYSCALL_64_fastpath+0x16/0x75
+[  357.935383] INFO: task systemd-udevd:1052 blocked for more than 120 seconds.
+[  357.935395]       Tainted: G        W       4.2.0-16-generic #19-Ubuntu
+[  357.935404] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[  357.935414] systemd-udevd   D ffff88007b896640     0  1052   1033 0x00000004
+[  357.935433]  ffff880079a0b598 0000000000000082 ffff88007951e400 ffff880067485780
+[  357.935453]  0000000000000246 ffff880079a0c000 ffff880079a0b710 ffff880079a0b708
+[  357.935472]  ffff880067485780 ffff880067485780 ffff880079a0b5b8 ffffffff817eb9a7
+[  357.935491] Call Trace:
+[  357.935509]  [<ffffffff817eb9a7>] schedule+0x37/0x80
+[  357.935527]  [<ffffffff817eea49>] schedule_timeout+0x189/0x250
+[  357.935546]  [<ffffffff8101e229>] ? sched_clock+0x9/0x10
+[  357.935565]  [<ffffffff810a5996>] ? try_to_wake_up+0x1f6/0x300
+[  357.935583]  [<ffffffff817ec3c3>] wait_for_completion+0xb3/0x140
+[  357.935600]  [<ffffffff810a5b60>] ? wake_up_q+0x70/0x70
+[  357.935618]  [<ffffffff8109502d>] flush_work+0x10d/0x1c0
+[  357.935636]  [<ffffffff81091200>] ? destroy_worker+0x90/0x90
+[  357.935654]  [<ffffffff81095215>] __cancel_work_timer+0xa5/0x1d0
+[  357.935674]  [<ffffffff812764d7>] ? kernfs_name_hash+0x17/0xa0
+[  357.935693]  [<ffffffff81095373>] cancel_delayed_work_sync+0x13/0x20
+[  357.935710]  [<ffffffff8164aeff>] power_supply_unregister+0x3f/0xc0
+[  357.935729]  [<ffffffff8148c33e>] sysfs_remove_battery+0x3d/0x52
+[  357.935746]  [<ffffffff8148d2bf>] acpi_battery_add+0x10f/0x180
+[  357.935763]  [<ffffffff8145a654>] acpi_device_probe+0x50/0xf7
+[  357.935780]  [<ffffffff81520b0a>] driver_probe_device+0x21a/0x490
+[  357.935796]  [<ffffffff81520e99>] __device_attach_driver+0x79/0xa0
+[  357.935811]  [<ffffffff81520e20>] ? __driver_attach+0xa0/0xa0
+[  357.935829]  [<ffffffff8151e787>] bus_for_each_drv+0x67/0xb0
+[  357.935845]  [<ffffffff815207ec>] __device_attach+0xdc/0x170
+[  357.935861]  [<ffffffff81520890>] device_attach+0x10/0x20
+[  357.935878]  [<ffffffff8145cbc7>] acpi_bus_attach+0x115/0x196
+[  357.935895]  [<ffffffff8145ccb4>] acpi_walk_dep_device_list+0x6c/0xb0
+[  357.935912]  [<ffffffff81648daf>] i2c_register_adapter+0x29f/0x4a0
+[  357.935928]  [<ffffffff8164900c>] i2c_add_adapter+0x5c/0x70
+[  357.935944]  [<ffffffff81649098>] i2c_add_numbered_adapter+0x78/0x80
+[  357.935969]  [<ffffffffc02b343f>] dw_i2c_probe+0x1ef/0x3d0 [i2c_designware_platform]
+[  357.935986]  [<ffffffff81279fe8>] ? sysfs_do_create_link_sd.isra.2+0x78/0xc0
+[  357.936002]  [<ffffffff81458869>] ? acpi_dev_pm_attach+0x21/0xa5
+[  357.936020]  [<ffffffff81522cc4>] platform_drv_probe+0x34/0x90
+[  357.936036]  [<ffffffff81520b0a>] driver_probe_device+0x21a/0x490
+[  357.936052]  [<ffffffff81520e10>] __driver_attach+0x90/0xa0
+[  357.936069]  [<ffffffff81520d80>] ? driver_probe_device+0x490/0x490
+[  357.936087]  [<ffffffff8151e6ac>] bus_for_each_dev+0x6c/0xc0
+[  357.936105]  [<ffffffff815202ae>] driver_attach+0x1e/0x20
+[  357.936123]  [<ffffffff8151fddb>] bus_add_driver+0x1eb/0x280
+[  357.936139]  [<ffffffffc02b8000>] ? 0xffffffffc02b8000
+[  357.936154]  [<ffffffff815216b0>] driver_register+0x60/0xe0
+[  357.936170]  [<ffffffff81522c0a>] __platform_driver_register+0x4a/0x50
+[  357.936192]  [<ffffffffc02b8017>] dw_i2c_init_driver+0x17/0x1000 [i2c_designware_platform]
+[  357.936208]  [<ffffffff81002123>] do_one_initcall+0xb3/0x200
+[  357.936225]  [<ffffffff811de027>] ? kmem_cache_alloc_trace+0x187/0x1f0
+[  357.936241]  [<ffffffff817e66c8>] ? do_init_module+0x28/0x1e7
+[  357.936258]  [<ffffffff817e6700>] do_init_module+0x60/0x1e7
+[  357.936276]  [<ffffffff81102876>] load_module+0x1676/0x1c10
+[  357.936292]  [<ffffffff810fe9c0>] ? __symbol_put+0x60/0x60
+[  357.936313]  [<ffffffff81202f80>] ? kernel_read+0x50/0x80
+[  357.936333]  [<ffffffff81103069>] SyS_finit_module+0xb9/0xf0
+[  357.936354]  [<ffffffff817ef9f2>] entry_SYSCALL_64_fastpath+0x16/0x75
+[  394.551615] [drm:intel_pipe_update_end [i915]] *ERROR* Atomic update failure on pipe A (start=19584 end=19585)
+[  395.843588] sdio_read_cis: 5 callbacks suppressed
+[  395.843595] mmc1: queuing unknown CIS tuple 0x80 (2 bytes)
+[  395.845085] mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+[  395.846687] mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+[  395.849582] mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+[  395.852278] mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+[  395.962397] brcmf_sdio_drivestrengthinit: No SDIO Drive strength init done for chip 43430 rev 0 pmurev 24
+[  395.963219] usbcore: registered new interface driver brcmfmac
+[  395.964186] brcmfmac_sdio mmc1:0001:1: Direct firmware load for brcm/brcmfmac43430-sdio.bin failed with error -2
+[  396.969792] brcmf_sdio_htclk: HT Avail timeout (1000000): clkctl 0x50
+[  397.977803] brcmf_sdio_htclk: HT Avail timeout (1000000): clkctl 0x50
