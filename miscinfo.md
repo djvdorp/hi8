@@ -21,7 +21,7 @@ Hardware Information |  |
 PMIC | Xpowers
 Audio | Realtek ALC5642
 MIPI Panel | Panasonic 19x12
-WIFI | Realtek RGN RTL8723BS
+WIFI | Broadcom BCM43430
 Bluetooth | Realtek RGN RTL8723BS
 GPS | Disabled
 Rear Camera | Lite-On 13P2BA829
